@@ -1,3 +1,14 @@
+# Schema per entry:
+#   name        (required) — unique identifier, matches the directory/file name in the marketplace
+#   path        (required) — GitHub web URL to the skill/command/agent file
+#   hash        (optional) — SHA256 of the file content, prefixed with "sha256:"
+#                            Format: sha256:<64-hex-chars>
+#                            Populated by `skills-registry push` or manual sync.
+#                            Used by `skills-registry pull` for tamper detection:
+#                            if present and mismatches the downloaded content, a warning
+#                            is shown before installation proceeds.
+#   description (required) — what the skill does and when to use it
+
 skills:
   - name: add-content-image
     path: https://github.com/amdmax/claude_marketplace/blob/main/skills/add-content-image/SKILL.md
