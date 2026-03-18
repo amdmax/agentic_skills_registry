@@ -236,57 +236,6 @@ commands:
       directly without spawning a team — useful for fetching stories, enriching criteria, or
       creating PRs solo.
 
-  - name: speckit.analyze
-    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/speckit.analyze.md
-    description: >-
-      Perform a non-destructive cross-artifact consistency and quality analysis across spec.md,
-      plan.md, and tasks.md after task generation.
-
-  - name: speckit.checklist
-    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/speckit.checklist.md
-    description: >-
-      Generate a custom checklist for the current feature based on user requirements.
-
-  - name: speckit.clarify
-    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/speckit.clarify.md
-    description: >-
-      Identify underspecified areas in the current feature spec by asking up to 5 highly targeted
-      clarification questions and encoding answers back into the spec.
-
-  - name: speckit.constitution
-    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/speckit.constitution.md
-    description: >-
-      Create or update the project constitution from interactive or provided principle inputs,
-      ensuring all dependent templates stay in sync.
-
-  - name: speckit.implement
-    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/speckit.implement.md
-    description: >-
-      Execute the implementation plan by processing and executing all tasks defined in tasks.md.
-
-  - name: speckit.plan
-    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/speckit.plan.md
-    description: >-
-      Execute the implementation planning workflow using the plan template to generate design
-      artifacts.
-
-  - name: speckit.specify
-    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/speckit.specify.md
-    description: >-
-      Create or update the feature specification from a natural language feature description.
-
-  - name: speckit.tasks
-    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/speckit.tasks.md
-    description: >-
-      Generate an actionable, dependency-ordered tasks.md for the feature based on available
-      design artifacts.
-
-  - name: speckit.taskstoissues
-    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/speckit.taskstoissues.md
-    description: >-
-      Convert existing tasks into actionable, dependency-ordered GitHub issues for the feature
-      based on available design artifacts.
-
   - name: test-architect
     path: https://github.com/amdmax/claude_marketplace/blob/main/commands/test-architect.md
     description: >-
