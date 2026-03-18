@@ -1,6 +1,3 @@
-source: https://github.com/amdmax/claude_marketplace
-description: All Anthropic skills available in the claude_marketplace repository
-
 skills:
   - name: add-content-image
     path: https://github.com/amdmax/claude_marketplace/blob/main/skills/add-content-image/SKILL.md
@@ -201,3 +198,159 @@ skills:
       UX analysis and data visualization specialist for educational content. Analyzes markdown files
       and generates implementation-ready Chart.js and Mermaid visualizations that enhance learning
       effectiveness and user engagement. Invokable with /ux-professional or /ux.
+
+commands:
+  - name: agile-dev-team
+    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/agile-dev-team.md
+    description: >-
+      Spin up a coordinated 7-agent TDD team: PM → Architect → Test Architect → Developers →
+      Scope Guard → DevOps → PM. Orchestrates the full story lifecycle from fetch to PR.
+
+  - name: architect
+    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/architect.md
+    description: >-
+      Standalone entry point for Morgan the Architect. Reads agent instructions, loads story
+      context, and executes the architect workflow directly without waiting for a PM message.
+
+  - name: backend-dev
+    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/backend-dev.md
+    description: >-
+      Standalone entry point for Alex the Backend Developer. Loads implementation brief and test
+      contracts then executes the backend-dev workflow directly.
+
+  - name: create-claude-hook
+    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/create-claude-hook.md
+    description: >-
+      Create a Claude Code hook with interactive configuration.
+
+  - name: frontend-dev
+    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/frontend-dev.md
+    description: >-
+      Standalone entry point for Casey the Frontend Developer. Loads implementation brief and test
+      contracts then executes the frontend-dev workflow directly.
+
+  - name: pm
+    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/pm.md
+    description: >-
+      Standalone entry point for Riley the PM. Loads story context and executes the PM workflow
+      directly without spawning a team — useful for fetching stories, enriching criteria, or
+      creating PRs solo.
+
+  - name: speckit.analyze
+    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/speckit.analyze.md
+    description: >-
+      Perform a non-destructive cross-artifact consistency and quality analysis across spec.md,
+      plan.md, and tasks.md after task generation.
+
+  - name: speckit.checklist
+    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/speckit.checklist.md
+    description: >-
+      Generate a custom checklist for the current feature based on user requirements.
+
+  - name: speckit.clarify
+    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/speckit.clarify.md
+    description: >-
+      Identify underspecified areas in the current feature spec by asking up to 5 highly targeted
+      clarification questions and encoding answers back into the spec.
+
+  - name: speckit.constitution
+    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/speckit.constitution.md
+    description: >-
+      Create or update the project constitution from interactive or provided principle inputs,
+      ensuring all dependent templates stay in sync.
+
+  - name: speckit.implement
+    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/speckit.implement.md
+    description: >-
+      Execute the implementation plan by processing and executing all tasks defined in tasks.md.
+
+  - name: speckit.plan
+    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/speckit.plan.md
+    description: >-
+      Execute the implementation planning workflow using the plan template to generate design
+      artifacts.
+
+  - name: speckit.specify
+    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/speckit.specify.md
+    description: >-
+      Create or update the feature specification from a natural language feature description.
+
+  - name: speckit.tasks
+    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/speckit.tasks.md
+    description: >-
+      Generate an actionable, dependency-ordered tasks.md for the feature based on available
+      design artifacts.
+
+  - name: speckit.taskstoissues
+    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/speckit.taskstoissues.md
+    description: >-
+      Convert existing tasks into actionable, dependency-ordered GitHub issues for the feature
+      based on available design artifacts.
+
+  - name: test-architect
+    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/test-architect.md
+    description: >-
+      Standalone entry point for Jordan the Test Architect. Loads implementation brief and
+      executes the test-architect workflow directly without waiting for an Architect message.
+
+  - name: write-cdk
+    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/write-cdk.md
+    description: >-
+      Review AWS CDK infrastructure code for best practices, Lambda@Edge constraints, and
+      project-specific patterns. Use when reviewing infrastructure/**/*.ts, cdk.json, or
+      *-stack.ts files.
+
+  - name: write-typescript
+    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/write-typescript.md
+    description: >-
+      Review TypeScript code for type safety, production patterns, testing coverage, and Lambda
+      best practices. Use when reviewing **/*.ts files (excluding infrastructure/).
+
+agents:
+  - name: architect
+    path: https://github.com/amdmax/claude_marketplace/blob/main/agents/architect.md
+    description: >-
+      Solution Architect that maps business requirements to implementation details and prepares
+      technical documentation for the test architect and developers.
+
+  - name: backend-dev
+    path: https://github.com/amdmax/claude_marketplace/blob/main/agents/backend-dev.md
+    description: >-
+      Implements backend handlers, infrastructure (CDK), and configuration to make integration
+      tests pass.
+
+  - name: code-simplifier
+    path: https://github.com/amdmax/claude_marketplace/blob/main/agents/code-simplifier.md
+    description: >-
+      Simplifies and refines code for clarity, consistency, and maintainability while preserving
+      all functionality. Focuses on recently modified code unless instructed otherwise.
+
+  - name: devops
+    path: https://github.com/amdmax/claude_marketplace/blob/main/agents/devops.md
+    description: >-
+      Owns the deployment pipeline after scope review passes. Runs builds, syncs to S3,
+      invalidates CloudFront, and verifies the live environment.
+
+  - name: frontend-dev
+    path: https://github.com/amdmax/claude_marketplace/blob/main/agents/frontend-dev.md
+    description: >-
+      Implements frontend code (TypeScript builders, Eta templates, CSS, build scripts) to make
+      unit and e2e tests pass.
+
+  - name: pm
+    path: https://github.com/amdmax/claude_marketplace/blob/main/agents/pm.md
+    description: >-
+      Team lead that fetches stories, enriches with acceptance criteria, manages story lifecycle,
+      and creates PRs after implementation.
+
+  - name: scope-guard
+    path: https://github.com/amdmax/claude_marketplace/blob/main/agents/scope-guard.md
+    description: >-
+      Independent reviewer that compares git diff against the architect's filesToChange and
+      outOfScope lists. Blocks DevOps until the branch is clean.
+
+  - name: test-architect
+    path: https://github.com/amdmax/claude_marketplace/blob/main/agents/test-architect.md
+    description: >-
+      Writes failing tests first (TDD red phase) based on the Architect's implementation brief.
+      Ensures test contracts are clear for developers.
