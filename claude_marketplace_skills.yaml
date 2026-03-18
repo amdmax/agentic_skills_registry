@@ -1,0 +1,203 @@
+source: https://github.com/amdmax/claude_marketplace
+description: All Anthropic skills available in the claude_marketplace repository
+
+skills:
+  - name: add-content-image
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/add-content-image/SKILL.md
+    description: >-
+      Automatically process and add the most recent screenshot from src/images to the appropriate
+      course materials. Analyzes the image content, determines the correct week and topic, moves
+      the file, and adds properly sized markdown references. Invokable with /add-content-image or /add-image.
+
+  - name: arch:create-adr
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/arch:create-adr/SKILL.md
+    description: >-
+      Generate Architecture Decision Records in MADR format with auto-numbering. Analyzes story
+      context, NFRs, and technical context to create comprehensive ADRs. Invokable with /arch:create-adr.
+
+  - name: arch:gather-nfrs
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/arch:gather-nfrs/SKILL.md
+    description: >-
+      Collect non-functional requirements through interactive Q&A. Asks targeted questions about
+      performance, scalability, security, reliability, and cost constraints. Invokable with /gather-nfrs.
+
+  - name: arch:maintain-registries
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/arch:maintain-registries/SKILL.md
+    description: >-
+      Read or update the project constraints, NFR, or risk registries. Use when the architect needs
+      to check or record constraints before proposing a design, map NFRs to a story's implementation
+      brief, identify or mitigate risks during story design, or validate an approach against existing
+      registry entries.
+
+  - name: bug-fix
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/bug-fix/SKILL.md
+    description: >-
+      Automate investigation and fixing of reported bugs from GitHub backlog. Use when user requests
+      bug fixing, wants to pick up issues from backlog, or says phrases like "fix this bug",
+      "investigate bug report", "work on reported issue". Always creates regression tests before
+      committing any fix.
+
+  - name: cdk-scripting
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/cdk-scripting/SKILL.md
+    description: >-
+      Guide for writing AWS CDK infrastructure code following best practices for resource management,
+      stateful/stateless patterns, and dynamic references. Helps scaffold CDK stacks with proper
+      import/create patterns. Invokable with /cdk-scripting or /cdk.
+
+  - name: cdk-validate
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/cdk-validate/SKILL.md
+    description: >-
+      Validate AWS CDK infrastructure with cdk-nag and cfn-lint.
+
+  - name: code-review
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/code-review/SKILL.md
+    description: >-
+      Comprehensive code review orchestrator that runs deterministic checks before LLM reviews.
+
+  - name: compliance
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/compliance/SKILL.md
+    description: >-
+      Validates business requirements compliance — generates OpenAPI specs, creates contract tests,
+      and ensures acceptance criteria alignment.
+
+  - name: create-story
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/create-story/SKILL.md
+    description: >-
+      Quick GitHub issue creation for commit workflow. Creates minimal issues with AIGCODE prefix
+      and stores in .agile-dev-team/active-story.json. Different from /fetch-story (planned work
+      from Projects).
+
+  - name: creative-writing
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/creative-writing/SKILL.md
+    description: >-
+      Generate creative content using Caitlin Kelly's journalistic writing techniques across multiple
+      genres — narrative journalism, fiction (short stories, novels), educational content, and general
+      creative writing. Invokable with /creative-writing or /write.
+
+  - name: css-architecture
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/css-architecture/SKILL.md
+    description: >-
+      Guidance for working with the modular CSS layer system. Helps developers understand where to
+      add styles, how to validate changes, and maintain the 5-layer architecture.
+
+  - name: debug
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/debug/SKILL.md
+    description: >-
+      Hypothesis-driven bug investigation with mandatory regression tests.
+
+  - name: editor-in-chief
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/editor-in-chief/SKILL.md
+    description: >-
+      Professional editorial review and content improvement for educational materials. Use when
+      users request editorial feedback, content review, writing quality assessment, or improvements
+      to course materials, textbooks, documentation, or any educational content. Invokable with
+      /editor-in-chief or /journalist.
+
+  - name: fetch-story
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/fetch-story/SKILL.md
+    description: >-
+      Fetch the next Ready story from GitHub Projects by priority. Stores story data in
+      .agile-dev-team/active-story.json and updates GitHub status to In Progress.
+      Invokable with /fetch-story.
+
+  - name: finalize-story
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/finalize-story/SKILL.md
+    description: >-
+      Wrap up a completed story by updating the GitHub issue with actual work done, linking the PR,
+      applying labels, assigning to self, and adding to the GitHub Project. Use after implementation
+      is done and a PR exists. Invokable with /finalize-story.
+
+  - name: gather-context
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/gather-context/SKILL.md
+    description: >-
+      Gather technical context from multiple sources including docs, code analysis, architecture
+      files, and user input. Appends comprehensive context to active story for informed
+      decision-making. Invokable with /gather-context.
+
+  - name: gh-actions
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/gh-actions/SKILL.md
+    description: >-
+      Create GitHub Actions composite actions — reusable workflow components that reduce duplication
+      and improve maintainability in CI/CD pipelines.
+
+  - name: gh-edit-workflow
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/gh-edit-workflow/SKILL.md
+    description: >-
+      Edit GitHub Actions workflows with automatic validation.
+
+  - name: gh:commit
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/gh:commit/SKILL.md
+    description: >-
+      Create git commits with issue-based AIGCODE numbering (AIGCODE-{issueNumber}). Analyzes
+      staged changes and generates commit messages following project conventions. Creates GitHub
+      issues if no active story exists.
+
+  - name: gh:pr
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/gh:pr/SKILL.md
+    description: >-
+      Create pull requests with automatic commit handling and story integration. Auto-commits
+      uncommitted changes via /gh:commit skill, prevents duplicate PRs, links to active GitHub
+      issue from .agile-dev-team/active-story.json, and creates new issues if needed.
+
+  - name: mermaid-diagram
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/mermaid-diagram/SKILL.md
+    description: >-
+      Generate theme-aware Mermaid diagrams for educational content. Creates flowcharts, sequence
+      diagrams, and graph diagrams using the project's color scheme with automatic light/dark mode
+      support. Invokable with /mermaid-diagram or /mermaid.
+
+  - name: overall-review
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/overall-review/SKILL.md
+    description: >-
+      Code quality, bug detection, and maintainability review.
+
+  - name: performance-review
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/performance-review/SKILL.md
+    description: >-
+      Detect performance issues and inefficiencies.
+
+  - name: play-story
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/play-story/SKILL.md
+    description: >-
+      Put a story "in play" by fetching it from GitHub Projects, gathering NFRs, collecting context,
+      and creating ADRs as needed. Invokable with /play-story.
+
+  - name: refactor-skill
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/refactor-skill/SKILL.md
+    description: >-
+      Convert monolithic SKILL.md files to modular structure with references/, config.yaml for
+      parameters, and optional validation hooks in frontmatter. Use when skills exceed 500 lines,
+      contain hardcoded project-specific values, or would benefit from progressive disclosure patterns.
+
+  - name: regenerate-course-content
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/regenerate-course-content/SKILL.md
+    description: >-
+      Rebuild the course HTML from markdown sources and report what was generated. Useful after
+      content updates to verify the build succeeds and see what changed. Invokable with
+      /regenerate-course-content or /rebuild.
+
+  - name: security-review
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/security-review/SKILL.md
+    description: >-
+      OWASP Top 10 + API security vulnerability scanner.
+
+  - name: skill-creator
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/skill-creator/SKILL.md
+    description: >-
+      Guide for creating effective skills. Use when users want to create a new skill (or update an
+      existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or
+      tool integrations.
+
+  - name: sync-skills
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/sync-skills/SKILL.md
+    description: >-
+      Push local skills to a remote GitHub repository for reuse across projects. Discovers skills,
+      syncs to remote repository, generates index, and reports results. Use when sharing skills
+      across projects or when user says "sync skills" or "push skills to GitHub".
+
+  - name: ux-professional
+    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/ux-professional/SKILL.md
+    description: >-
+      UX analysis and data visualization specialist for educational content. Analyzes markdown files
+      and generates implementation-ready Chart.js and Mermaid visualizations that enhance learning
+      effectiveness and user engagement. Invokable with /ux-professional or /ux.
