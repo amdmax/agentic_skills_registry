@@ -1,0 +1,73 @@
+name: Sync from Marketplace
+
+on:
+  repository_dispatch:
+    types: [marketplace-updated]
+  workflow_dispatch:
+    inputs:
+      manifest_sha:
+        description: 'SHA or ref to fetch manifest from (default: main)'
+        default: 'main'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+env:
+  MARKETPLACE_RAW: https://raw.githubusercontent.com/amdmax/claude_marketplace
+
+jobs:
+  sync:
+    name: Sync registry from marketplace manifest
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout agentic_skills_registry
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install ruamel.yaml
+
+      - name: Fetch manifest
+        run: |
+          REF="${{ github.event.client_payload.manifest_ref || inputs.manifest_sha || 'main' }}"
+          echo "Fetching manifest at ref: $REF"
+          curl -fsSL "$MARKETPLACE_RAW/$REF/.claude-plugin/published-artifacts-manifest.json" > manifest.json
+          echo "Manifest fetched — $(python -c "import json; d=json.load(open('manifest.json')); print(len(d['artifacts']), 'artifacts')")"
+
+      - name: Sync registry
+        id: sync
+        run: |
+          python scripts/sync_registry.py \
+            --manifest manifest.json \
+            --marketplace-raw "$MARKETPLACE_RAW/main" \
+            --registry claude_marketplace_skills.yaml \
+          && echo "changed=true" >> "$GITHUB_OUTPUT" \
+          || echo "changed=false" >> "$GITHUB_OUTPUT"
+
+      - name: Create PR with updated registry
+        if: steps.sync.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          BRANCH="sync/marketplace-$(date +%Y%m%d-%H%M%S)"
+          git checkout -b "$BRANCH"
+          git add claude_marketplace_skills.yaml
+          git commit -m "sync: update skill hashes from marketplace"
+          git push origin "$BRANCH"
+          gh pr create \
+            --title "sync: update skill hashes from marketplace" \
+            --body "Automated sync triggered by \`marketplace-updated\` dispatch from \`amdmax/claude_marketplace\`." \
+            --base main \
+            --head "$BRANCH"
+
+      - name: No changes detected
+        if: steps.sync.outputs.changed == 'false'
+        run: echo "Registry is already up to date — no PR needed."
