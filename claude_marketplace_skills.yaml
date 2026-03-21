@@ -10,318 +10,380 @@
 #   description (required) — what the skill does and when to use it
 
 skills:
-  - name: add-content-image
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/add-content-image/SKILL.md
-    description: >-
-      Automatically process and add the most recent screenshot from src/images to the appropriate
-      course materials. Analyzes the image content, determines the correct week and topic, moves
-      the file, and adds properly sized markdown references. Invokable with /add-content-image or /add-image.
+- name: add-content-image
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/add-content-image/SKILL.md
+  description: >-
+    Automatically process and add the most recent screenshot from src/images to the appropriate
+    course materials. Analyzes the image content, determines the correct week and topic, moves
+    the file, and adds properly sized markdown references. Invokable with /add-content-image or /add-image.
 
-  - name: arch:create-adr
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/arch:create-adr/SKILL.md
-    description: >-
-      Generate Architecture Decision Records in MADR format with auto-numbering. Analyzes story
-      context, NFRs, and technical context to create comprehensive ADRs. Invokable with /arch:create-adr.
+  hash: sha256:0d229ec87579a3fe78ca41a5ee874d22b05e6e0961ac6946ebcc5a077f715f19
+- name: arch:create-adr
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/arch:create-adr/SKILL.md
+  description: >-
+    Generate Architecture Decision Records in MADR format with auto-numbering. Analyzes story
+    context, NFRs, and technical context to create comprehensive ADRs. Invokable with /arch:create-adr.
 
-  - name: arch:gather-nfrs
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/arch:gather-nfrs/SKILL.md
-    description: >-
-      Collect non-functional requirements through interactive Q&A. Asks targeted questions about
-      performance, scalability, security, reliability, and cost constraints. Invokable with /gather-nfrs.
+  hash: sha256:565d9399dd2a35738cdfa295319f887c9ef94982c1247b145620bfcf46d1fb96
+- name: arch:gather-nfrs
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/arch:gather-nfrs/SKILL.md
+  description: >-
+    Collect non-functional requirements through interactive Q&A. Asks targeted questions about
+    performance, scalability, security, reliability, and cost constraints. Invokable with /gather-nfrs.
 
-  - name: arch:maintain-registries
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/arch:maintain-registries/SKILL.md
-    description: >-
-      Read or update the project constraints, NFR, or risk registries. Use when the architect needs
-      to check or record constraints before proposing a design, map NFRs to a story's implementation
-      brief, identify or mitigate risks during story design, or validate an approach against existing
-      registry entries.
+  hash: sha256:497f6a72b0d473a45db30d9b9cd36fa17e8fd7dcf251a5aa32d4784dea4c3a32
+- name: arch:maintain-registries
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/arch:maintain-registries/SKILL.md
+  description: >-
+    Read or update the project constraints, NFR, or risk registries. Use when the architect needs
+    to check or record constraints before proposing a design, map NFRs to a story's implementation
+    brief, identify or mitigate risks during story design, or validate an approach against existing
+    registry entries.
 
-  - name: bug-fix
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/bug-fix/SKILL.md
-    description: >-
-      Automate investigation and fixing of reported bugs from GitHub backlog. Use when user requests
-      bug fixing, wants to pick up issues from backlog, or says phrases like "fix this bug",
-      "investigate bug report", "work on reported issue". Always creates regression tests before
-      committing any fix.
+  hash: sha256:06313609835d11eaae1d3c37fed6dc6af4087c1dc7be8c141837f8ceafb84b8b
+- name: bug-fix
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/bug-fix/SKILL.md
+  description: >-
+    Automate investigation and fixing of reported bugs from GitHub backlog. Use when user requests
+    bug fixing, wants to pick up issues from backlog, or says phrases like "fix this bug",
+    "investigate bug report", "work on reported issue". Always creates regression tests before
+    committing any fix.
 
-  - name: cdk-scripting
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/cdk-scripting/SKILL.md
-    description: >-
-      Guide for writing AWS CDK infrastructure code following best practices for resource management,
-      stateful/stateless patterns, and dynamic references. Helps scaffold CDK stacks with proper
-      import/create patterns. Invokable with /cdk-scripting or /cdk.
+  hash: sha256:2c804c642a5c50dd2c534405991a9c29e69c2d099a775e93c8c9552d8053626f
+- name: cdk-scripting
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/cdk-scripting/SKILL.md
+  description: >-
+    Guide for writing AWS CDK infrastructure code following best practices for resource management,
+    stateful/stateless patterns, and dynamic references. Helps scaffold CDK stacks with proper
+    import/create patterns. Invokable with /cdk-scripting or /cdk.
 
-  - name: cdk-validate
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/cdk-validate/SKILL.md
-    description: >-
-      Validate AWS CDK infrastructure with cdk-nag and cfn-lint.
+  hash: sha256:15071c9a09c29ccca778ac00f04a5efe61e16a7a6640b0e3ed7e4125f51b1bf9
+- name: cdk-validate
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/cdk-validate/SKILL.md
+  description: >-
+    Validate AWS CDK infrastructure with cdk-nag and cfn-lint.
 
-  - name: code-review
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/code-review/SKILL.md
-    description: >-
-      Comprehensive code review orchestrator that runs deterministic checks before LLM reviews.
+  hash: sha256:8c931545beecd19bec72460674a82644111286bd51ff70dea04e29e45c7d3b57
+- name: code-review
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/code-review/SKILL.md
+  description: >-
+    Comprehensive code review orchestrator that runs deterministic checks before LLM reviews.
 
-  - name: compliance
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/compliance/SKILL.md
-    description: >-
-      Validates business requirements compliance — generates OpenAPI specs, creates contract tests,
-      and ensures acceptance criteria alignment.
+  hash: sha256:20d86e593f0b39416ff073addb4b911f5b3ac24c64c2ff4fe3af4e579064166c
+- name: compliance
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/compliance/SKILL.md
+  description: >-
+    Validates business requirements compliance — generates OpenAPI specs, creates contract tests,
+    and ensures acceptance criteria alignment.
 
-  - name: create-story
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/create-story/SKILL.md
-    description: >-
-      Quick GitHub issue creation for commit workflow. Creates minimal issues with AIGCODE prefix
-      and stores in .agile-dev-team/active-story.json. Different from /fetch-story (planned work
-      from Projects).
+  hash: sha256:4dd4387fa51e7fce0870e08f6ece5207c13c17734f8966d9c133393eb5ff8f50
+- name: create-story
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/create-story/SKILL.md
+  description: >-
+    Quick GitHub issue creation for commit workflow. Creates minimal issues with AIGCODE prefix
+    and stores in .agile-dev-team/active-story.json. Different from /fetch-story (planned work
+    from Projects).
 
-  - name: creative-writing
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/creative-writing/SKILL.md
-    description: >-
-      Generate creative content using Caitlin Kelly's journalistic writing techniques across multiple
-      genres — narrative journalism, fiction (short stories, novels), educational content, and general
-      creative writing. Invokable with /creative-writing or /write.
+  hash: sha256:0e7ae189775a275f07f5b86f215778e2977be2ec608491269e277af6904a33d6
+- name: creative-writing
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/creative-writing/SKILL.md
+  description: >-
+    Generate creative content using Caitlin Kelly's journalistic writing techniques across multiple
+    genres — narrative journalism, fiction (short stories, novels), educational content, and general
+    creative writing. Invokable with /creative-writing or /write.
 
-  - name: css-architecture
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/css-architecture/SKILL.md
-    description: >-
-      Guidance for working with the modular CSS layer system. Helps developers understand where to
-      add styles, how to validate changes, and maintain the 5-layer architecture.
+  hash: sha256:9c75461417ebdba9a5f51d86d9f100addd80c375e4898cc9177b53b62a6b0f9f
+- name: css-architecture
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/css-architecture/SKILL.md
+  description: >-
+    Guidance for working with the modular CSS layer system. Helps developers understand where to
+    add styles, how to validate changes, and maintain the 5-layer architecture.
 
-  - name: debug
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/debug/SKILL.md
-    description: >-
-      Hypothesis-driven bug investigation with mandatory regression tests.
+  hash: sha256:a29a2fe37f230d1422a7493d59602e7ac4f1e92969c9fe688d61a7a694f8a539
+- name: debug
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/debug/SKILL.md
+  description: >-
+    Hypothesis-driven bug investigation with mandatory regression tests.
 
-  - name: editor-in-chief
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/editor-in-chief/SKILL.md
-    description: >-
-      Professional editorial review and content improvement for educational materials. Use when
-      users request editorial feedback, content review, writing quality assessment, or improvements
-      to course materials, textbooks, documentation, or any educational content. Invokable with
-      /editor-in-chief or /journalist.
+  hash: sha256:8a96f471a4e4bd70691ff376281eb434d763e7eae774d6076b4881e6388c8124
+- name: editor-in-chief
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/editor-in-chief/SKILL.md
+  description: >-
+    Professional editorial review and content improvement for educational materials. Use when
+    users request editorial feedback, content review, writing quality assessment, or improvements
+    to course materials, textbooks, documentation, or any educational content. Invokable with
+    /editor-in-chief or /journalist.
 
-  - name: fetch-story
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/fetch-story/SKILL.md
-    description: >-
-      Fetch the next Ready story from GitHub Projects by priority. Stores story data in
-      .agile-dev-team/active-story.json and updates GitHub status to In Progress.
-      Invokable with /fetch-story.
+  hash: sha256:167228a913eeca9ac3236b9f95c7565044842547fe1cdf0648220dcac40cbfe5
+# WARNING: 'fetch-story' not found in marketplace manifest — possible rename or removal
+# WARNING: 'fetch-story' not found in marketplace manifest — possible rename or removal
+- name: fetch-story
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/fetch-story/SKILL.md
+  description: >-
+    Fetch the next Ready story from GitHub Projects by priority. Stores story data in
+    .agile-dev-team/active-story.json and updates GitHub status to In Progress.
+    Invokable with /fetch-story.
 
-  - name: finalize-story
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/finalize-story/SKILL.md
-    description: >-
-      Wrap up a completed story by updating the GitHub issue with actual work done, linking the PR,
-      applying labels, assigning to self, and adding to the GitHub Project. Use after implementation
-      is done and a PR exists. Invokable with /finalize-story.
+# WARNING: 'finalize-story' not found in marketplace manifest — possible rename or removal
+# WARNING: 'finalize-story' not found in marketplace manifest — possible rename or removal
+- name: finalize-story
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/finalize-story/SKILL.md
+  description: >-
+    Wrap up a completed story by updating the GitHub issue with actual work done, linking the PR,
+    applying labels, assigning to self, and adding to the GitHub Project. Use after implementation
+    is done and a PR exists. Invokable with /finalize-story.
 
-  - name: gather-context
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/gather-context/SKILL.md
-    description: >-
-      Gather technical context from multiple sources including docs, code analysis, architecture
-      files, and user input. Appends comprehensive context to active story for informed
-      decision-making. Invokable with /gather-context.
+- name: gather-context
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/gather-context/SKILL.md
+  description: >-
+    Gather technical context from multiple sources including docs, code analysis, architecture
+    files, and user input. Appends comprehensive context to active story for informed
+    decision-making. Invokable with /gather-context.
 
-  - name: gh-actions
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/gh-actions/SKILL.md
-    description: >-
-      Create GitHub Actions composite actions — reusable workflow components that reduce duplication
-      and improve maintainability in CI/CD pipelines.
+  hash: sha256:e574cd210d1d67160d81f35f40ee3567d488c2f58b4810054b9bbb530171c653
+- name: gh-actions
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/gh-actions/SKILL.md
+  description: >-
+    Create GitHub Actions composite actions — reusable workflow components that reduce duplication
+    and improve maintainability in CI/CD pipelines.
 
-  - name: gh-edit-workflow
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/gh-edit-workflow/SKILL.md
-    description: >-
-      Edit GitHub Actions workflows with automatic validation.
+  hash: sha256:4cee960c3a7e093e5af2d7e0258a919bf775112e373be5d62c8e4ff06f471454
+- name: gh-edit-workflow
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/gh-edit-workflow/SKILL.md
+  description: >-
+    Edit GitHub Actions workflows with automatic validation.
 
-  - name: gh:commit
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/gh:commit/SKILL.md
-    description: >-
-      Create git commits with issue-based AIGCODE numbering (AIGCODE-{issueNumber}). Analyzes
-      staged changes and generates commit messages following project conventions. Creates GitHub
-      issues if no active story exists.
+  hash: sha256:230729c917cb63d8b3a9930e8df25abd3d0560ef30ef7cb825ee50f70014c9aa
+- name: gh:commit
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/gh:commit/SKILL.md
+  description: >-
+    Create git commits with issue-based AIGCODE numbering (AIGCODE-{issueNumber}). Analyzes
+    staged changes and generates commit messages following project conventions. Creates GitHub
+    issues if no active story exists.
 
-  - name: gh:pr
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/gh:pr/SKILL.md
-    description: >-
-      Create pull requests with automatic commit handling and story integration. Auto-commits
-      uncommitted changes via /gh:commit skill, prevents duplicate PRs, links to active GitHub
-      issue from .agile-dev-team/active-story.json, and creates new issues if needed.
+  hash: sha256:c994ace2f90e516613f248de887d7b3b6b922c2645e58d03b16856f802c5612d
+- name: gh:pr
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/gh:pr/SKILL.md
+  description: >-
+    Create pull requests with automatic commit handling and story integration. Auto-commits
+    uncommitted changes via /gh:commit skill, prevents duplicate PRs, links to active GitHub
+    issue from .agile-dev-team/active-story.json, and creates new issues if needed.
 
-  - name: mermaid-diagram
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/mermaid-diagram/SKILL.md
-    description: >-
-      Generate theme-aware Mermaid diagrams for educational content. Creates flowcharts, sequence
-      diagrams, and graph diagrams using the project's color scheme with automatic light/dark mode
-      support. Invokable with /mermaid-diagram or /mermaid.
+  hash: sha256:a472bf8c9f8ff67a0cdf58df99d850137c61c619b34a235daaffff41918f0f5a
+- name: mermaid-diagram
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/mermaid-diagram/SKILL.md
+  description: >-
+    Generate theme-aware Mermaid diagrams for educational content. Creates flowcharts, sequence
+    diagrams, and graph diagrams using the project's color scheme with automatic light/dark mode
+    support. Invokable with /mermaid-diagram or /mermaid.
 
-  - name: overall-review
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/overall-review/SKILL.md
-    description: >-
-      Code quality, bug detection, and maintainability review.
+  hash: sha256:faf36c3302acdfd22040b7650da8d35b0e2dee1adfecd13c5226d74bf5daaaf9
+- name: overall-review
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/overall-review/SKILL.md
+  description: >-
+    Code quality, bug detection, and maintainability review.
 
-  - name: performance-review
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/performance-review/SKILL.md
-    description: >-
-      Detect performance issues and inefficiencies.
+  hash: sha256:c88a9d4cf5b9f6ee646717bf79aead123d8637325ecabbd4b8e8b3aef256fb69
+- name: performance-review
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/performance-review/SKILL.md
+  description: >-
+    Detect performance issues and inefficiencies.
 
-  - name: play-story
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/play-story/SKILL.md
-    description: >-
-      Put a story "in play" by fetching it from GitHub Projects, gathering NFRs, collecting context,
-      and creating ADRs as needed. Invokable with /play-story.
+  hash: sha256:99c952f127f713d64c5942db00362e4143b87eb71dba591518a92ddaac47882e
+- name: play-story
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/play-story/SKILL.md
+  description: >-
+    Put a story "in play" by fetching it from GitHub Projects, gathering NFRs, collecting context,
+    and creating ADRs as needed. Invokable with /play-story.
 
-  - name: refactor-skill
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/refactor-skill/SKILL.md
-    description: >-
-      Convert monolithic SKILL.md files to modular structure with references/, config.yaml for
-      parameters, and optional validation hooks in frontmatter. Use when skills exceed 500 lines,
-      contain hardcoded project-specific values, or would benefit from progressive disclosure patterns.
+  hash: sha256:eb124e36341aff4a035254cad702116daba1b8774e9268688a9aa683878cd62c
+- name: refactor-skill
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/refactor-skill/SKILL.md
+  description: >-
+    Convert monolithic SKILL.md files to modular structure with references/, config.yaml for
+    parameters, and optional validation hooks in frontmatter. Use when skills exceed 500 lines,
+    contain hardcoded project-specific values, or would benefit from progressive disclosure patterns.
 
-  - name: regenerate-course-content
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/regenerate-course-content/SKILL.md
-    description: >-
-      Rebuild the course HTML from markdown sources and report what was generated. Useful after
-      content updates to verify the build succeeds and see what changed. Invokable with
-      /regenerate-course-content or /rebuild.
+  hash: sha256:30039125d6e32f0d5ee8fd9333a8444f7c4f87c215d0e2c54125ff6b447a816c
+- name: regenerate-course-content
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/regenerate-course-content/SKILL.md
+  description: >-
+    Rebuild the course HTML from markdown sources and report what was generated. Useful after
+    content updates to verify the build succeeds and see what changed. Invokable with
+    /regenerate-course-content or /rebuild.
 
-  - name: security-review
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/security-review/SKILL.md
-    description: >-
-      OWASP Top 10 + API security vulnerability scanner.
+  hash: sha256:87736112756720102ae01bda5c20695ccf61b2b43add124101d7ffbf606d2a3f
+- name: security-review
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/security-review/SKILL.md
+  description: >-
+    OWASP Top 10 + API security vulnerability scanner.
 
-  - name: skill-creator
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/skill-creator/SKILL.md
-    description: >-
-      Guide for creating effective skills. Use when users want to create a new skill (or update an
-      existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or
-      tool integrations.
+  hash: sha256:5993449d6d83588d1c1f5eb4ca85b778e9b482a2bd7546855d8ee8c5fa4c59ba
+- name: skill-creator
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/skill-creator/SKILL.md
+  description: >-
+    Guide for creating effective skills. Use when users want to create a new skill (or update an
+    existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or
+    tool integrations.
 
-  - name: skills-registry
-    path: https://github.com/amdmax/agentic_skills_registry/blob/main/skills/skills-registry/SKILL.md
-    hash: sha256:090d150dadb95b8f93722bbda68a74ef74a6a52ce275bb1030ab49fdaab86aff
-    description: >-
-      Manage Claude Code skills, commands, and agents from the amdmax marketplace registry.
-      Use to install, update, discover, or publish skills/commands/agents. Triggered by:
-      /skills-registry pull <name>, /skills-registry learn <description>,
-      /skills-registry update <name>, /skills-registry push <name>, /skills-registry list.
-      Also triggers on phrases like "install skill", "pull skill from registry",
-      "update installed skill", "push skill to marketplace", "find a skill for X".
+  hash: sha256:cf5b4cff2e3d285f2500410fd2e7476d7574f76f37db371c82aefef8c4d6e088
+- name: skills-registry
+  path: https://github.com/amdmax/agentic_skills_registry/blob/main/skills/skills-registry/SKILL.md
+  hash: sha256:090d150dadb95b8f93722bbda68a74ef74a6a52ce275bb1030ab49fdaab86aff
+  description: >-
+    Manage Claude Code skills, commands, and agents from the amdmax marketplace registry.
+    Use to install, update, discover, or publish skills/commands/agents. Triggered by:
+    /skills-registry pull <name>, /skills-registry learn <description>,
+    /skills-registry update <name>, /skills-registry push <name>, /skills-registry list.
+    Also triggers on phrases like "install skill", "pull skill from registry",
+    "update installed skill", "push skill to marketplace", "find a skill for X".
 
-  - name: sync-skills
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/sync-skills/SKILL.md
-    description: >-
-      Push local skills to a remote GitHub repository for reuse across projects. Discovers skills,
-      syncs to remote repository, generates index, and reports results. Use when sharing skills
-      across projects or when user says "sync skills" or "push skills to GitHub".
+- name: sync-skills
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/sync-skills/SKILL.md
+  description: >-
+    Push local skills to a remote GitHub repository for reuse across projects. Discovers skills,
+    syncs to remote repository, generates index, and reports results. Use when sharing skills
+    across projects or when user says "sync skills" or "push skills to GitHub".
 
-  - name: ux-professional
-    path: https://github.com/amdmax/claude_marketplace/blob/main/skills/ux-professional/SKILL.md
-    description: >-
-      UX analysis and data visualization specialist for educational content. Analyzes markdown files
-      and generates implementation-ready Chart.js and Mermaid visualizations that enhance learning
-      effectiveness and user engagement. Invokable with /ux-professional or /ux.
+  hash: sha256:6931089724422943457b4b66fc951e4ba60318445a186b19813d20f85b2b6317
+- name: ux-professional
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/ux-professional/SKILL.md
+  description: >-
+    UX analysis and data visualization specialist for educational content. Analyzes markdown files
+    and generates implementation-ready Chart.js and Mermaid visualizations that enhance learning
+    effectiveness and user engagement. Invokable with /ux-professional or /ux.
 
+  hash: sha256:9416842231792a5bb1decab81d813d113acc265415cfb77215df7f1b113e38df
+- name: gh:fetch-story
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/gh:fetch-story/SKILL.md
+  hash: sha256:c20a4ac96c147bc29f9d8a03a2f7a3bd2f5bcd49330ac5fb116b6fc8c17d04e3
+  description: Fetch the next Ready story from GitHub Projects by priority. Stores story data in 
+    .agile-dev-team/active-story.json and updates GitHub status to In Progress. Invokable with /fetch-story.
+- name: gh:story-finalize
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/gh:story-finalize/SKILL.md
+  hash: sha256:3831c106d7d25e71113406b857cb8b2eceb886d84b9afb55ca57d401489cc14f
+  description: Wrap up a completed story by updating the GitHub issue with actual work done, linking the PR, applying 
+    labels, assigning to self, and adding to the GitHub Project. Use after implementation is done and a PR exists. Reads
+    from .agile-dev-team/active-story.json if available; accepts a GitHub issue URL as an argument otherwise. Invokable 
+    with /finalize-story.
 commands:
-  - name: agile-dev-team
-    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/agile-dev-team.md
-    description: >-
-      Spin up a coordinated 7-agent TDD team: PM → Architect → Test Architect → Developers →
-      Scope Guard → DevOps → PM. Orchestrates the full story lifecycle from fetch to PR.
+- name: agile-dev-team
+  path: https://github.com/amdmax/claude_marketplace/blob/main/commands/agile-dev-team.md
+  description: >-
+    Spin up a coordinated 7-agent TDD team: PM → Architect → Test Architect → Developers →
+    Scope Guard → DevOps → PM. Orchestrates the full story lifecycle from fetch to PR.
 
-  - name: architect
-    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/architect.md
-    description: >-
-      Standalone entry point for Morgan the Architect. Reads agent instructions, loads story
-      context, and executes the architect workflow directly without waiting for a PM message.
+  hash: sha256:fbdb718789dd441b92b4eaa62ffda901f22e7572049642010d070166c5a23c72
+- name: architect
+  path: https://github.com/amdmax/claude_marketplace/blob/main/commands/architect.md
+  description: >-
+    Standalone entry point for Morgan the Architect. Reads agent instructions, loads story
+    context, and executes the architect workflow directly without waiting for a PM message.
 
-  - name: backend-dev
-    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/backend-dev.md
-    description: >-
-      Standalone entry point for Alex the Backend Developer. Loads implementation brief and test
-      contracts then executes the backend-dev workflow directly.
+  hash: sha256:82ccfacd1c837ab58c8ef234f4ad5c140d4e548372b7268605ba521d09fe296b
+- name: backend-dev
+  path: https://github.com/amdmax/claude_marketplace/blob/main/commands/backend-dev.md
+  description: >-
+    Standalone entry point for Alex the Backend Developer. Loads implementation brief and test
+    contracts then executes the backend-dev workflow directly.
 
-  - name: create-claude-hook
-    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/create-claude-hook.md
-    description: >-
-      Create a Claude Code hook with interactive configuration.
+  hash: sha256:995eaca8cdbaef85d93db46948a142a9ff272186fc2fb3287228bd2c3609fe7c
+- name: create-claude-hook
+  path: https://github.com/amdmax/claude_marketplace/blob/main/commands/create-claude-hook.md
+  description: >-
+    Create a Claude Code hook with interactive configuration.
 
-  - name: frontend-dev
-    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/frontend-dev.md
-    description: >-
-      Standalone entry point for Casey the Frontend Developer. Loads implementation brief and test
-      contracts then executes the frontend-dev workflow directly.
+  hash: sha256:ffef1fd755fc0c08248ae09fcc49fd1a86c938a1372a9bc845203109a6c6a8cc
+- name: frontend-dev
+  path: https://github.com/amdmax/claude_marketplace/blob/main/commands/frontend-dev.md
+  description: >-
+    Standalone entry point for Casey the Frontend Developer. Loads implementation brief and test
+    contracts then executes the frontend-dev workflow directly.
 
-  - name: pm
-    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/pm.md
-    description: >-
-      Standalone entry point for Riley the PM. Loads story context and executes the PM workflow
-      directly without spawning a team — useful for fetching stories, enriching criteria, or
-      creating PRs solo.
+  hash: sha256:f7060bfa4852a0206b46db28b7f8d0c5515cc3b3f99e472900270a6db7bb58e1
+- name: pm
+  path: https://github.com/amdmax/claude_marketplace/blob/main/commands/pm.md
+  description: >-
+    Standalone entry point for Riley the PM. Loads story context and executes the PM workflow
+    directly without spawning a team — useful for fetching stories, enriching criteria, or
+    creating PRs solo.
 
-  - name: test-architect
-    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/test-architect.md
-    description: >-
-      Standalone entry point for Jordan the Test Architect. Loads implementation brief and
-      executes the test-architect workflow directly without waiting for an Architect message.
+  hash: sha256:685b455d93dba1253c4631cb4e64d263fceaf22bb2e361ef48b46ac49cd6ffcb
+- name: test-architect
+  path: https://github.com/amdmax/claude_marketplace/blob/main/commands/test-architect.md
+  description: >-
+    Standalone entry point for Jordan the Test Architect. Loads implementation brief and
+    executes the test-architect workflow directly without waiting for an Architect message.
 
-  - name: write-cdk
-    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/write-cdk.md
-    description: >-
-      Review AWS CDK infrastructure code for best practices, Lambda@Edge constraints, and
-      project-specific patterns. Use when reviewing infrastructure/**/*.ts, cdk.json, or
-      *-stack.ts files.
+  hash: sha256:72aaf7504fb9137069ac2663d6a78bcf072c4fffa01cdd8cadc79ae306dc5303
+- name: write-cdk
+  path: https://github.com/amdmax/claude_marketplace/blob/main/commands/write-cdk.md
+  description: >-
+    Review AWS CDK infrastructure code for best practices, Lambda@Edge constraints, and
+    project-specific patterns. Use when reviewing infrastructure/**/*.ts, cdk.json, or
+    *-stack.ts files.
 
-  - name: write-typescript
-    path: https://github.com/amdmax/claude_marketplace/blob/main/commands/write-typescript.md
-    description: >-
-      Review TypeScript code for type safety, production patterns, testing coverage, and Lambda
-      best practices. Use when reviewing **/*.ts files (excluding infrastructure/).
+  hash: sha256:c55dd89f364fb85e56b5602563a6a66f9e49adea50fbb58ab027425b657d7b12
+- name: write-typescript
+  path: https://github.com/amdmax/claude_marketplace/blob/main/commands/write-typescript.md
+  description: >-
+    Review TypeScript code for type safety, production patterns, testing coverage, and Lambda
+    best practices. Use when reviewing **/*.ts files (excluding infrastructure/).
 
+  hash: sha256:a37375e32d47bcac60c8b4f48394b3724037ac3cc121f473eb735c28df6d756f
 agents:
-  - name: architect
-    path: https://github.com/amdmax/claude_marketplace/blob/main/agents/architect.md
-    description: >-
-      Solution Architect that maps business requirements to implementation details and prepares
-      technical documentation for the test architect and developers.
+- name: architect
+  path: https://github.com/amdmax/claude_marketplace/blob/main/agents/architect.md
+  description: >-
+    Solution Architect that maps business requirements to implementation details and prepares
+    technical documentation for the test architect and developers.
 
-  - name: backend-dev
-    path: https://github.com/amdmax/claude_marketplace/blob/main/agents/backend-dev.md
-    description: >-
-      Implements backend handlers, infrastructure (CDK), and configuration to make integration
-      tests pass.
+  hash: sha256:39740bf5dbcee87f7582285c3ebd003a8f6d256bd5fdb8b5dbf56caa46f7148e
+- name: backend-dev
+  path: https://github.com/amdmax/claude_marketplace/blob/main/agents/backend-dev.md
+  description: >-
+    Implements backend handlers, infrastructure (CDK), and configuration to make integration
+    tests pass.
 
-  - name: code-simplifier
-    path: https://github.com/amdmax/claude_marketplace/blob/main/agents/code-simplifier.md
-    description: >-
-      Simplifies and refines code for clarity, consistency, and maintainability while preserving
-      all functionality. Focuses on recently modified code unless instructed otherwise.
+  hash: sha256:d3aac82cf3ead1b103423a41bc13c47b3661dfbd1d1f818035105a61f80c84c8
+- name: code-simplifier
+  path: https://github.com/amdmax/claude_marketplace/blob/main/agents/code-simplifier.md
+  description: >-
+    Simplifies and refines code for clarity, consistency, and maintainability while preserving
+    all functionality. Focuses on recently modified code unless instructed otherwise.
 
-  - name: devops
-    path: https://github.com/amdmax/claude_marketplace/blob/main/agents/devops.md
-    description: >-
-      Owns the deployment pipeline after scope review passes. Runs builds, syncs to S3,
-      invalidates CloudFront, and verifies the live environment.
+  hash: sha256:0be110b17c5ed190a465bfaffeeba150b17305aea4f35aa26452841697109598
+- name: devops
+  path: https://github.com/amdmax/claude_marketplace/blob/main/agents/devops.md
+  description: >-
+    Owns the deployment pipeline after scope review passes. Runs builds, syncs to S3,
+    invalidates CloudFront, and verifies the live environment.
 
-  - name: frontend-dev
-    path: https://github.com/amdmax/claude_marketplace/blob/main/agents/frontend-dev.md
-    description: >-
-      Implements frontend code (TypeScript builders, Eta templates, CSS, build scripts) to make
-      unit and e2e tests pass.
+  hash: sha256:39d2d1250886d440a40a0d523f6a18e26f9a62a903e4980e47313889cb1145f1
+- name: frontend-dev
+  path: https://github.com/amdmax/claude_marketplace/blob/main/agents/frontend-dev.md
+  description: >-
+    Implements frontend code (TypeScript builders, Eta templates, CSS, build scripts) to make
+    unit and e2e tests pass.
 
-  - name: pm
-    path: https://github.com/amdmax/claude_marketplace/blob/main/agents/pm.md
-    description: >-
-      Team lead that fetches stories, enriches with acceptance criteria, manages story lifecycle,
-      and creates PRs after implementation.
+  hash: sha256:33e136be7420fbc45e914c828b79089fe046b9665390f5ee225ae73827af8a93
+- name: pm
+  path: https://github.com/amdmax/claude_marketplace/blob/main/agents/pm.md
+  description: >-
+    Team lead that fetches stories, enriches with acceptance criteria, manages story lifecycle,
+    and creates PRs after implementation.
 
-  - name: scope-guard
-    path: https://github.com/amdmax/claude_marketplace/blob/main/agents/scope-guard.md
-    description: >-
-      Independent reviewer that compares git diff against the architect's filesToChange and
-      outOfScope lists. Blocks DevOps until the branch is clean.
+  hash: sha256:54edf20a5e7ac5e4c15e37379536d75c71dcc52158a7de587f9e22214ae5efb8
+- name: scope-guard
+  path: https://github.com/amdmax/claude_marketplace/blob/main/agents/scope-guard.md
+  description: >-
+    Independent reviewer that compares git diff against the architect's filesToChange and
+    outOfScope lists. Blocks DevOps until the branch is clean.
 
-  - name: test-architect
-    path: https://github.com/amdmax/claude_marketplace/blob/main/agents/test-architect.md
-    description: >-
-      Writes failing tests first (TDD red phase) based on the Architect's implementation brief.
-      Ensures test contracts are clear for developers.
+  hash: sha256:a8f198a15e400318efe6cfc1ee907a235b5c0477eb86e917dc305b0ed8c00d2f
+- name: test-architect
+  path: https://github.com/amdmax/claude_marketplace/blob/main/agents/test-architect.md
+  description: >-
+    Writes failing tests first (TDD red phase) based on the Architect's implementation brief.
+    Ensures test contracts are clear for developers.
+  hash: sha256:9d310b7fd76e638b17e1f6eee1f07c955b4e85df99279fa9de68349ac09b9cca
