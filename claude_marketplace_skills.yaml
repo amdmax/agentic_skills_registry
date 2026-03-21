@@ -117,6 +117,8 @@ skills:
   hash: sha256:167228a913eeca9ac3236b9f95c7565044842547fe1cdf0648220dcac40cbfe5
 # WARNING: 'fetch-story' not found in marketplace manifest — possible rename or removal
 # WARNING: 'fetch-story' not found in marketplace manifest — possible rename or removal
+# WARNING: 'fetch-story' not found in marketplace manifest — possible rename or removal
+# WARNING: 'fetch-story' not found in marketplace manifest — possible rename or removal
 - name: fetch-story
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/fetch-story/SKILL.md
   description: >-
@@ -124,6 +126,8 @@ skills:
     .agile-dev-team/active-story.json and updates GitHub status to In Progress.
     Invokable with /fetch-story.
 
+# WARNING: 'finalize-story' not found in marketplace manifest — possible rename or removal
+# WARNING: 'finalize-story' not found in marketplace manifest — possible rename or removal
 # WARNING: 'finalize-story' not found in marketplace manifest — possible rename or removal
 # WARNING: 'finalize-story' not found in marketplace manifest — possible rename or removal
 - name: finalize-story
@@ -190,6 +194,8 @@ skills:
     Detect performance issues and inefficiencies.
 
   hash: sha256:99c952f127f713d64c5942db00362e4143b87eb71dba591518a92ddaac47882e
+# WARNING: 'play-story' not found in marketplace manifest — possible rename or removal
+# WARNING: 'play-story' not found in marketplace manifest — possible rename or removal
 - name: play-story
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/play-story/SKILL.md
   description: >-
@@ -266,6 +272,11 @@ skills:
     labels, assigning to self, and adding to the GitHub Project. Use after implementation is done and a PR exists. Reads
     from .agile-dev-team/active-story.json if available; accepts a GitHub issue URL as an argument otherwise. Invokable 
     with /finalize-story.
+- name: gh:play-story
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/gh:play-story/SKILL.md
+  hash: sha256:eb124e36341aff4a035254cad702116daba1b8774e9268688a9aa683878cd62c
+  description: Put a story "in play" by fetching it from GitHub Projects, gathering NFRs, collecting context, and 
+    creating ADRs as needed. Invokable with /play-story.
 commands:
 - name: agile-dev-team
   path: https://github.com/amdmax/claude_marketplace/blob/main/commands/agile-dev-team.md
