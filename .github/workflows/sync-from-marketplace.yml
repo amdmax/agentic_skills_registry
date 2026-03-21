@@ -34,11 +34,18 @@ jobs:
         run: pip install ruamel.yaml
 
       - name: Fetch manifest
+        env:
+          MANIFEST_INLINE: ${{ toJSON(github.event.client_payload.manifest) }}
         run: |
-          REF="${{ github.event.client_payload.manifest_ref || inputs.manifest_sha || 'main' }}"
-          echo "Fetching manifest at ref: $REF"
-          curl -fsSL "$MARKETPLACE_RAW/$REF/.claude-plugin/published-artifacts-manifest.json" > manifest.json
-          echo "Manifest fetched — $(python -c "import json; d=json.load(open('manifest.json')); print(len(d['artifacts']), 'artifacts')")"
+          if [ "$MANIFEST_INLINE" != "null" ] && [ -n "$MANIFEST_INLINE" ]; then
+            echo "Using inline manifest from dispatch payload"
+            echo "$MANIFEST_INLINE" > manifest.json
+          else
+            REF="${{ github.event.client_payload.manifest_ref || inputs.manifest_sha || 'main' }}"
+            echo "Fetching manifest at ref: $REF"
+            curl -fsSL "$MARKETPLACE_RAW/$REF/.claude-plugin/published-artifacts-manifest.json" > manifest.json
+          fi
+          echo "Manifest ready — $(python -c "import json; d=json.load(open('manifest.json')); print(len(d['artifacts']), 'artifacts')")"
 
       - name: Sync registry
         id: sync
