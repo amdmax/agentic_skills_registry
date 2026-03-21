@@ -257,11 +257,15 @@ skills:
 - name: gh:fetch-story
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/gh:fetch-story/SKILL.md
   hash: sha256:c20a4ac96c147bc29f9d8a03a2f7a3bd2f5bcd49330ac5fb116b6fc8c17d04e3
-  description: 'Imported from marketplace: gh:fetch-story'
+  description: Fetch the next Ready story from GitHub Projects by priority. Stores story data in 
+    .agile-dev-team/active-story.json and updates GitHub status to In Progress. Invokable with /fetch-story.
 - name: gh:story-finalize
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/gh:story-finalize/SKILL.md
   hash: sha256:3831c106d7d25e71113406b857cb8b2eceb886d84b9afb55ca57d401489cc14f
-  description: 'Imported from marketplace: gh:story-finalize'
+  description: Wrap up a completed story by updating the GitHub issue with actual work done, linking the PR, applying 
+    labels, assigning to self, and adding to the GitHub Project. Use after implementation is done and a PR exists. Reads
+    from .agile-dev-team/active-story.json if available; accepts a GitHub issue URL as an argument otherwise. Invokable 
+    with /finalize-story.
 commands:
 - name: agile-dev-team
   path: https://github.com/amdmax/claude_marketplace/blob/main/commands/agile-dev-team.md
