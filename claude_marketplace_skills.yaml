@@ -145,6 +145,7 @@ skills:
     decision-making. Invokable with /gather-context.
 
   hash: sha256:e574cd210d1d67160d81f35f40ee3567d488c2f58b4810054b9bbb530171c653
+# WARNING: 'gh-actions' not found in marketplace manifest — possible rename or removal
 - name: gh-actions
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/gh-actions/SKILL.md
   description: >-
@@ -277,6 +278,10 @@ skills:
   hash: sha256:eb124e36341aff4a035254cad702116daba1b8774e9268688a9aa683878cd62c
   description: Put a story "in play" by fetching it from GitHub Projects, gathering NFRs, collecting context, and 
     creating ADRs as needed. Invokable with /play-story.
+- name: gh:actions
+  path: https://github.com/amdmax/claude_marketplace/blob/main/skills/gh:actions/SKILL.md
+  hash: sha256:4cee960c3a7e093e5af2d7e0258a919bf775112e373be5d62c8e4ff06f471454
+  description: 'Imported from marketplace: gh:actions'
 commands:
 - name: agile-dev-team
   path: https://github.com/amdmax/claude_marketplace/blob/main/commands/agile-dev-team.md
