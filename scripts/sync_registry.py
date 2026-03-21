@@ -125,21 +125,15 @@ def main():
                 entry["path"] = github_url
                 changed = True
         else:
-            # New entry — fetch description from SKILL.md frontmatter
-            raw_url = f"{marketplace_raw}/{artifact_path}"
-            description = ""
-            try:
-                content = fetch_url(raw_url)
-                description = parse_frontmatter_description(content)
-            except Exception as e:
-                print(f"  WARNING: could not fetch {raw_url}: {e}", file=sys.stderr)
+            # New entry — use description from manifest (embedded by hash_published_artifacts.py)
+            description = artifact.get("description", "") or f"Imported from marketplace: {registry_name}"
 
             from ruamel.yaml.comments import CommentedMap
             new_entry = CommentedMap()
             new_entry["name"] = registry_name
             new_entry["path"] = github_url
             new_entry["hash"] = artifact_hash
-            new_entry["description"] = description or f"Imported from marketplace: {registry_name}"
+            new_entry["description"] = description
 
             section_list.append(new_entry)
             print(f"  + Added new entry: {registry_name} ({section_key})")
