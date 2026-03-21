@@ -15,12 +15,16 @@ Exit codes:
 
 import argparse
 import json
+import re
 import sys
 import urllib.request
 import yaml
-from ruamel.yaml import YAML
-from ruamel.yaml.comments import CommentedSeq
+from io import StringIO
 from pathlib import Path
+from ruamel.yaml import YAML
+from ruamel.yaml.comments import CommentedMap, CommentedSeq
+from ruamel.yaml.error import CommentMark
+from ruamel.yaml.tokens import CommentToken
 
 
 GITHUB_BLOB_BASE = "https://github.com/amdmax/claude_marketplace/blob/main"
@@ -95,7 +99,10 @@ def main():
     ryaml.preserve_quotes = True
     ryaml.width = 120
 
-    registry = ryaml.load(registry_path)
+    raw_text = registry_path.read_text()
+    already_warned_names = set(re.findall(r"# WARNING: '([^']+)' not found", raw_text))
+
+    registry = ryaml.load(StringIO(raw_text))
 
     # Ensure all sections exist
     for section in ("skills", "commands", "agents"):
@@ -128,7 +135,6 @@ def main():
             # New entry — use description from manifest (embedded by hash_published_artifacts.py)
             description = artifact.get("description", "") or f"Imported from marketplace: {registry_name}"
 
-            from ruamel.yaml.comments import CommentedMap
             new_entry = CommentedMap()
             new_entry["name"] = registry_name
             new_entry["path"] = github_url
@@ -155,35 +161,19 @@ def main():
             path = entry.get("path", "")
             if CLAUDE_MARKETPLACE_DOMAIN not in path:
                 continue
-            if name not in manifest_registry_names:
-                # Check if warning comment already exists
-                existing_comment = section_list.ca.items.get(i, [None, None, None, None])
-                comment_before = existing_comment[1]  # comment before item
-                already_warned = (
-                    comment_before is not None
-                    and any("WARNING" in str(c) for c in comment_before if c is not None)
-                )
-                if not already_warned:
-                    section_list.yaml_set_comment_before_after_key(
-                        i,
-                        before=f"WARNING: '{name}' not found in marketplace manifest — possible rename or removal",
-                    ) if hasattr(section_list, "yaml_set_comment_before_after_key") else None
-                    # Fallback: use ca.items directly
-                    if not hasattr(section_list, "yaml_set_comment_before_after_key") or True:
-                        from ruamel.yaml.tokens import CommentToken
-                        from ruamel.yaml.error import CommentMark
-                        comment_text = f"# WARNING: '{name}' not found in marketplace manifest — possible rename or removal\n"
-                        ct = CommentToken(comment_text, CommentMark(0), None)
-                        if i not in section_list.ca.items:
-                            section_list.ca.items[i] = [None, [ct], None, None]
-                        else:
-                            existing = section_list.ca.items[i][1]
-                            if existing is None:
-                                section_list.ca.items[i][1] = [ct]
-                            else:
-                                existing.insert(0, ct)
-                    print(f"  ! Flagged missing entry: {name} ({section_key})")
-                    changed = True
+            if name not in manifest_registry_names and name not in already_warned_names:
+                comment_text = f"# WARNING: '{name}' not found in marketplace manifest — possible rename or removal\n"
+                ct = CommentToken(comment_text, CommentMark(0), None)
+                if i not in section_list.ca.items:
+                    section_list.ca.items[i] = [None, [ct], None, None]
+                else:
+                    existing = section_list.ca.items[i][1]
+                    if existing is None:
+                        section_list.ca.items[i][1] = [ct]
+                    else:
+                        existing.insert(0, ct)
+                print(f"  ! Flagged missing entry: {name} ({section_key})")
+                changed = True
 
     if not changed:
         print("No changes detected — registry is up to date.")
