@@ -22,7 +22,7 @@ Publish a locally-authored or locally-modified skill, command, or agent to `amdm
 
    | Type | Target path in marketplace |
    |------|---------------------------|
-   | skill | `skills/<name>/SKILL.md` (copy full directory if sub-commands exist) |
+   | skill | `skills/<name>/` — copy the **entire directory** (SKILL.md, sub-command `.md` files, `references/`, `scripts/`, `templates/`, and any other subdirectories) |
    | command | `commands/<name>.md` |
    | agent | `agents/<name>.md` |
 
@@ -33,9 +33,10 @@ Publish a locally-authored or locally-modified skill, command, or agent to `amdm
    git checkout main && git pull
    git checkout -b <branch-name>
 
-   # copy files from project
+   # For skills — always copy the full directory (preserves references/, scripts/, templates/, etc.)
    cp -r <project>/.claude/skills/<name>/ skills/<name>/
-   # or: cp <project>/.claude/commands/<name>.md commands/<name>.md
+   # For commands or agents — single file only
+   cp <project>/.claude/commands/<name>.md commands/<name>.md
 
    git add skills/<name>/
    git commit -m "feat: add/update <name>"
@@ -53,7 +54,7 @@ Publish a locally-authored or locally-modified skill, command, or agent to `amdm
 ## Validation criteria
 
 - The PR branch is based on a current `main` — no stale base
-- All files for the skill are included (SKILL.md + any sub-command `.md` files + `references/`)
+- For skills: the entire directory is copied — SKILL.md, sub-command `.md` files, and all subdirectories (`references/`, `scripts/`, `templates/`, or anything else present)
 - Each file has valid YAML frontmatter (`name`, `description` at minimum)
 - Only one PR is opened — targeting `amdmax/claude_marketplace`, not the registry
 - CI passes on the marketplace PR before merging
