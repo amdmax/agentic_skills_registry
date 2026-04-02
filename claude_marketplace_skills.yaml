@@ -10,6 +10,7 @@
 #   description (required) — what the skill does and when to use it
 
 skills:
+# WARNING: 'add-content-image' not found in marketplace manifest — possible rename or removal
 - name: add-content-image
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/add-content-image/SKILL.md
   description: >-
@@ -18,6 +19,7 @@ skills:
     the file, and adds properly sized markdown references. Invokable with /add-content-image or /add-image.
 
   hash: sha256:0d229ec87579a3fe78ca41a5ee874d22b05e6e0961ac6946ebcc5a077f715f19
+# WARNING: 'arch:create-adr' not found in marketplace manifest — possible rename or removal
 - name: arch:create-adr
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/arch:create-adr/SKILL.md
   description: >-
@@ -43,6 +45,7 @@ skills:
     registry entries.
 
   hash: sha256:06313609835d11eaae1d3c37fed6dc6af4087c1dc7be8c141837f8ceafb84b8b
+# WARNING: 'bug-fix' not found in marketplace manifest — possible rename or removal
 - name: bug-fix
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/bug-fix/SKILL.md
   description: >-
@@ -92,6 +95,7 @@ skills:
     from Projects).
 
   hash: sha256:0e7ae189775a275f07f5b86f215778e2977be2ec608491269e277af6904a33d6
+# WARNING: 'creative-writing' not found in marketplace manifest — possible rename or removal
 - name: creative-writing
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/creative-writing/SKILL.md
   description: >-
@@ -100,6 +104,7 @@ skills:
     creative writing. Invokable with /creative-writing or /write.
 
   hash: sha256:d357e22ada1b1009e626590c58292c7e30496915151d050881d56736f96afb5d
+# WARNING: 'css-architecture' not found in marketplace manifest — possible rename or removal
 - name: css-architecture
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/css-architecture/SKILL.md
   description: >-
@@ -107,12 +112,14 @@ skills:
     add styles, how to validate changes, and maintain the 5-layer architecture.
 
   hash: sha256:a29a2fe37f230d1422a7493d59602e7ac4f1e92969c9fe688d61a7a694f8a539
+# WARNING: 'debug' not found in marketplace manifest — possible rename or removal
 - name: debug
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/debug/SKILL.md
   description: >-
     Hypothesis-driven bug investigation with mandatory regression tests.
 
   hash: sha256:8a96f471a4e4bd70691ff376281eb434d763e7eae774d6076b4881e6388c8124
+# WARNING: 'editor-in-chief' not found in marketplace manifest — possible rename or removal
 - name: editor-in-chief
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/editor-in-chief/SKILL.md
   description: >-
@@ -145,6 +152,7 @@ skills:
     is done and a PR exists. Invokable with /finalize-story.
 
   hash: sha256:21bc832f568139a814c11a0682e64959dbae595f2d8789e17c3f6aa267af0e63
+# WARNING: 'gather-context' not found in marketplace manifest — possible rename or removal
 - name: gather-context
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/gather-context/SKILL.md
   description: >-
@@ -186,6 +194,7 @@ skills:
     issue from .agile-dev-team/active-story.json, and creates new issues if needed.
 
   hash: sha256:a472bf8c9f8ff67a0cdf58df99d850137c61c619b34a235daaffff41918f0f5a
+# WARNING: 'mermaid-diagram' not found in marketplace manifest — possible rename or removal
 - name: mermaid-diagram
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/mermaid-diagram/SKILL.md
   description: >-
@@ -226,6 +235,7 @@ skills:
     contain hardcoded project-specific values, or would benefit from progressive disclosure patterns.
 
   hash: sha256:30039125d6e32f0d5ee8fd9333a8444f7c4f87c215d0e2c54125ff6b447a816c
+# WARNING: 'regenerate-course-content' not found in marketplace manifest — possible rename or removal
 - name: regenerate-course-content
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/regenerate-course-content/SKILL.md
   description: >-
@@ -270,6 +280,7 @@ skills:
     across projects or when user says "sync skills" or "push skills to GitHub".
 
   hash: sha256:6931089724422943457b4b66fc951e4ba60318445a186b19813d20f85b2b6317
+# WARNING: 'ux-professional' not found in marketplace manifest — possible rename or removal
 - name: ux-professional
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/ux-professional/SKILL.md
   description: >-
@@ -303,63 +314,74 @@ skills:
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/gh:actions/SKILL.md
   hash: sha256:4cee960c3a7e093e5af2d7e0258a919bf775112e373be5d62c8e4ff06f471454
   description: 'Imported from marketplace: gh:actions'
+# WARNING: 'agent:architect' not found in marketplace manifest — possible rename or removal
 - name: agent:architect
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/agent:architect/SKILL.md
   hash: sha256:8ac178601e473ba96071c5d41c09407f3aca2e53a1a3a18d7c92927c5b8a4ebe
   description: Spawn the Architect agent to map business requirements to implementation details, produce implementation 
     briefs, assess risks, and create ADRs. Use for standalone architecture tasks without the full agile team.
+# WARNING: 'agent:backend-dev' not found in marketplace manifest — possible rename or removal
 - name: agent:backend-dev
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/agent:backend-dev/SKILL.md
   hash: sha256:0dbac04d111a54805b4cd500168728e44e04a51ddaff1d3cc89d3ac8c716e373
   description: Spawn the Backend Developer agent to implement backend handlers, infrastructure, and configuration to 
     make integration tests pass (TDD green phase). Use for standalone backend implementation without the full agile 
     team.
+# WARNING: 'agent:frontend-dev' not found in marketplace manifest — possible rename or removal
 - name: agent:frontend-dev
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/agent:frontend-dev/SKILL.md
   hash: sha256:c5e43adcca4d4c459e4c6f6a2ad584d5bb8f3ba97215d94907b72d9a6d5f39c4
   description: Spawn the Frontend Developer agent to implement frontend code (TypeScript, templates, CSS, build scripts)
     to make unit and e2e tests pass (TDD green phase). Use for standalone frontend implementation without the full agile
     team.
+# WARNING: 'agent:pm' not found in marketplace manifest — possible rename or removal
 - name: agent:pm
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/agent:pm/SKILL.md
   hash: sha256:d115bac79599fbf16c25a393a03bdf1f66127f15a056e31405bb72000e6206fd
   description: Spawn the PM agent (Team Lead) to fetch stories, enrich with ACs and NFRs, manage story lifecycle, and 
     create PRs. Use for standalone PM tasks without the full agile team.
+# WARNING: 'agent:test-architect' not found in marketplace manifest — possible rename or removal
 - name: agent:test-architect
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/agent:test-architect/SKILL.md
   hash: sha256:66aa15a72dbe51164f0fb4a8baf22699f5e37b8a93b627c19cc3f4aa2ccf5802
   description: Spawn the Test Architect agent to write failing tests (TDD red phase) based on implementation briefs. 
     Tests define contracts for developers to implement against. Use for standalone test authoring without the full agile
     team.
+# WARNING: 'android:mobile-test' not found in marketplace manifest — possible rename or removal
 - name: android:mobile-test
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/android:mobile-test/SKILL.md
   hash: sha256:f6123e0f1198d4a38dfe011569fe7dbca079d8af9ff0c45f4e8791d275eca1c3
   description: "Run, add, or debug Android (chromium) mobile layout tests for the aigensa landing page.\nUses raw playwright
     + Jest (jest project: mobile). Trigger when the user wants to\nrun mobile tests on Android/Pixel, add a new page test,
     or debug a chromium test failure.\n"
+# WARNING: 'anthropic:skill-creator' not found in marketplace manifest — possible rename or removal
 - name: anthropic:skill-creator
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/anthropic:skill-creator/SKILL.md
   hash: sha256:2bde0efffafbebaead4aa5cebe94e9b2f382d6ed81044613d44788fa9186eac1
   description: Guide for creating effective skills. This skill should be used when users want to create a new skill (or 
     update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool 
     integrations.
+# WARNING: 'arch:adr-render' not found in marketplace manifest — possible rename or removal
 - name: arch:adr-render
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/arch:adr-render/SKILL.md
   hash: sha256:63e3d4c936b16b4af42871cbbe646549202f50f2af9683b3febc9173eaaa9d2f
   description: "Convert a docs/adr/NNNN-slug.adr.yaml file into a MADR-format Markdown file. Output path is same as input
     with .md extension. Use after /arch:adr-yaml.\n"
+# WARNING: 'arch:adr-yaml' not found in marketplace manifest — possible rename or removal
 - name: arch:adr-yaml
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/arch:adr-yaml/SKILL.md
   hash: sha256:5e09b3cf102c1f8dee2fb724cbd266ea21f99a139d33a669d9e7d1e7d1253198
   description: "Generate a structured YAML Architecture Decision Record (MADR format) at docs/adr/NNNN-slug.adr.yaml. Validates
     schema automatically via PostToolUse hook. Use /arch:adr-yaml to produce machine-readable ADR data before rendering with
     /arch:adr-render.\n"
+# WARNING: 'arch:fitness-function' not found in marketplace manifest — possible rename or removal
 - name: arch:fitness-function
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/arch:fitness-function/SKILL.md
   hash: sha256:6978c1941467c7bc2368e92ca93d695f1cc6b4112873c13416c7d6598fb70c37
   description: Define testable fitness functions from business priorities and NFRs. Use when defining non-functional 
     requirements, SLAs, SLOs, quality metrics, performance targets, or when asked "how do we ensure quality" or "what 
     are the acceptance criteria". Automatically engaged during /feature command Phase 3.5.
+# WARNING: 'arch:maintain-constraints-registry' not found in marketplace manifest — possible rename or removal
 - name: arch:maintain-constraints-registry
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/arch:maintain-constraints-registry/SKILL.md
   hash: sha256:92b7b9db73493e15654724f896b9c05311b52af4648ea03b0bc131af0a1a2ac6
@@ -367,6 +389,7 @@ skills:
     architect needs to check project-wide constraints before proposing a design, when a new constraint is established 
     (e.g., "only target AWS", "no GPL libraries"), or when any agent needs to validate that a proposed approach doesn't 
     violate a hard constraint. Hard constraints are blocking; soft constraints are advisory.
+# WARNING: 'arch:maintain-nfr-registry' not found in marketplace manifest — possible rename or removal
 - name: arch:maintain-nfr-registry
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/arch:maintain-nfr-registry/SKILL.md
   hash: sha256:581a2f2ac1a537e45b5f99af9b9a40791e4ef054c814a519d59865bd100f45a6
@@ -374,6 +397,7 @@ skills:
     the architect maps NFRs to a story's implementation brief, when new project-wide NFRs are established, or when an 
     agent needs to query which NFRs apply to a given story or category. Distinguishes project-level NFRs (permanent, all
     stories) from story-level NFRs (scoped to one issue).
+# WARNING: 'arch:maintain-risk-registry' not found in marketplace manifest — possible rename or removal
 - name: arch:maintain-risk-registry
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/arch:maintain-risk-registry/SKILL.md
   hash: sha256:650a1d904ab1f8c34887ad5f0e00a87a0438c86f5e5e14ba441a22563e1c8bdc
@@ -381,26 +405,31 @@ skills:
     identifies new risks during story design, when a risk is mitigated and needs a status update, or when any agent 
     needs to review existing open risks. Supports both project-level risks (persistent across stories) and story-level 
     risks (scoped to one issue).
+# WARNING: 'aws:architect' not found in marketplace manifest — possible rename or removal
 - name: aws:architect
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/aws:architect/SKILL.md
   hash: sha256:215896b53929de3545aba338b9035c8592421ba2ab959c627bcb427c44ab94c4
   description: Provide expert guidance on AWS deployments following the AWS Well-Architected Framework. Help design, 
     review, and optimize cloud architectures across all six pillars.
+# WARNING: 'aws:cdk' not found in marketplace manifest — possible rename or removal
 - name: aws:cdk
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/aws:cdk/SKILL.md
   hash: sha256:15071c9a09c29ccca778ac00f04a5efe61e16a7a6640b0e3ed7e4125f51b1bf9
   description: Guide for writing AWS CDK infrastructure code following best practices for resource management, 
     stateful/stateless patterns, and dynamic references. Helps scaffold CDK stacks with proper import/create patterns. 
     Invokable with /cdk-scripting or /cdk.
+# WARNING: 'aws:cdk-validate' not found in marketplace manifest — possible rename or removal
 - name: aws:cdk-validate
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/aws:cdk-validate/SKILL.md
   hash: sha256:f3af1f3e801e2648a89b4cb837263d70d5fce763519d46f0ad6c5e0352434037
   description: Validate AWS CDK infrastructure with cdk-nag and cfn-lint
+# WARNING: 'claude:hooks' not found in marketplace manifest — possible rename or removal
 - name: claude:hooks
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/claude:hooks/SKILL.md
   hash: sha256:de088f988e487a667a9b2baaf55adeae12e0edbad5e06f47b498a807ca3ea22e
   description: Comprehensive Claude Code hooks configuration for notifications, validation, auto-formatting, safety 
     checks, and context loading.
+# WARNING: 'claude:plugin-scaffold' not found in marketplace manifest — possible rename or removal
 - name: claude:plugin-scaffold
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/claude:plugin-scaffold/SKILL.md
   hash: sha256:ee2e50f7d171492255ca7bb2c286e0467a6a3137ea55ca34896fab4e60f987e4
@@ -408,28 +437,33 @@ skills:
     (anthropics/claude-plugins-official). Use when the user wants to create a Claude Code plugin, scaffold a plugin 
     project, or asks about the official plugin structure, plugin.json, slash commands, or how to submit a plugin to the 
     marketplace.
+# WARNING: 'claude:refactor-skill' not found in marketplace manifest — possible rename or removal
 - name: claude:refactor-skill
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/claude:refactor-skill/SKILL.md
   hash: sha256:292611f47e7c1ac0a82c78f547f5606488ac3b2267294ab0312fcbe254f2941b
   description: Convert monolithic SKILL.md files to modular structure with references/, config.yaml for parameters, and 
     optional validation hooks in frontmatter. Use when skills exceed 500 lines, contain hardcoded project-specific 
     values, or would benefit from progressive disclosure patterns.
+# WARNING: 'claude:skill-creator' not found in marketplace manifest — possible rename or removal
 - name: claude:skill-creator
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/claude:skill-creator/SKILL.md
   hash: sha256:72efa4f9055f727edbd56594f2938018e229439ec179318f2d286de4b7df7e78
   description: Guide for creating effective skills. This skill should be used when users want to create a new skill (or 
     update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool 
     integrations.
+# WARNING: 'claude:sync-skills' not found in marketplace manifest — possible rename or removal
 - name: claude:sync-skills
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/claude:sync-skills/SKILL.md
   hash: sha256:fee8e0374e02027bdb2915d6a7deb42bd566f07e65ec275139057c46a7b65b81
   description: Push local skills to https://github.com/{{SKILLS_REPO_OWNER}}/{{SKILLS_REPO_NAME}} for reuse across 
     projects. Discovers skills, syncs to remote repository, generates index, and reports results. Use when you want to 
     share skills across projects or when user says "sync skills", "push skills to GitHub", or "share skills".
+# WARNING: 'claude:validate-skills' not found in marketplace manifest — possible rename or removal
 - name: claude:validate-skills
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/claude:validate-skills/SKILL.md
   hash: sha256:638fa63c6892df0a0110fb2309d7aea2576ea2fa95236b197211eba7c766c5a2
   description: Validate skill files for proper YAML frontmatter format and valid Claude Code skill options
+# WARNING: 'cuda-remote-manager' not found in marketplace manifest — possible rename or removal
 - name: cuda-remote-manager
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/cuda-remote-manager/SKILL.md
   hash: sha256:3d28c2db5c774d6cf58bf8390d7b51aebc3558a870d1b5c7217d6b41b50ff493
@@ -437,6 +471,7 @@ skills:
     to or check status of the cuda-dev machine, (2) Start/stop/manage vLLM inference servers, (3) Check GPU status or CUDA
     environment, (4) Compile or run CUDA programs, (5) Manage LiteLLM proxy for AI coding assistants, (6) Shutdown/reboot
     the remote machine, or (7) Configure VS Code Remote SSH for CUDA development.'
+# WARNING: 'design-system' not found in marketplace manifest — possible rename or removal
 - name: design-system
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/design-system/SKILL.md
   hash: sha256:50694ba71018582012aaa9e82b161e9ec9e82f33e94621fe411dd70a7abe852c
@@ -444,6 +479,7 @@ skills:
     components, accessibility, and UX patterns tailored to your domain. Use when the user asks to create a design 
     system, build a component library, establish design tokens, define CSS architecture, or needs systematic UI/UX 
     foundations.
+# WARNING: 'experimentator' not found in marketplace manifest — possible rename or removal
 - name: experimentator
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/experimentator/SKILL.md
   hash: sha256:167702e632499b6032b3bac3635dc77de87f0ac3da8551a70f560e2a325830ea
@@ -451,30 +487,36 @@ skills:
     when the user wants to try changes, experiment with code, test alternatives, or explore modifications without 
     affecting main codebase. Triggers on phrases like "experiment with", "try out", "test in isolation", "worktree 
     experiment".
+# WARNING: 'gather-nfr' not found in marketplace manifest — possible rename or removal
 - name: gather-nfr
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/gather-nfr/SKILL.md
   hash: sha256:85f05ef7fdb0c8d7b94c8eceae6433c8fe4e01b2f60e295eaba4144f4afd9759
   description: Collect non-functional requirements through interactive Q&A. Asks targeted questions about performance, 
     scalability, security, reliability, and cost constraints. Invokable with /gather-nfr.
+# WARNING: 'git:commit' not found in marketplace manifest — possible rename or removal
 - name: git:commit
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/git:commit/SKILL.md
   hash: sha256:9b08868f3ce2b799792fbd9dc5a2b96b62a56e92241c2948a36d1faeb4b6682c
   description: Create git commits with configurable numbering (issue-based or sequential). Analyzes staged changes and 
     generates commit messages following project conventions. Optionally creates GitHub issues if no active story exists.
+# WARNING: 'github:actions' not found in marketplace manifest — possible rename or removal
 - name: github:actions
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/github:actions/SKILL.md
   hash: sha256:a6d9ef9015b6074d98d404aa4bf3aab90f4195ed97efc1738be03624a1e57522
   description: Create and manage GitHub Actions composite actions
+# WARNING: 'github:create-issue' not found in marketplace manifest — possible rename or removal
 - name: github:create-issue
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/github:create-issue/SKILL.md
   hash: sha256:cd03104ee9666977edae4f4b4c170aa75b5a01de57ff1a68a9afb24af5493df6
   description: Create high-quality, comprehensive GitHub issues with templates, validation, and best practices. For 
     detailed, well-structured issues requiring planning and documentation. Use /create-story for minimal issues during 
     commits.
+# WARNING: 'github:edit-workflow' not found in marketplace manifest — possible rename or removal
 - name: github:edit-workflow
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/github:edit-workflow/SKILL.md
   hash: sha256:1656eec2165fed4699229110d9ae5057975953de73430e215f58e89cdd59034e
   description: Edit GitHub Actions workflows with automatic validation
+# WARNING: 'github:pull-request' not found in marketplace manifest — possible rename or removal
 - name: github:pull-request
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/github:pull-request/SKILL.md
   hash: sha256:2790b83d51a0daedea1c280129b9efe1cb27c14bb03713e653e45f2da27098a4
@@ -483,6 +525,7 @@ skills:
     duplicate PRs, links to active GitHub issue from .claude/active-story.json, creates new issues if needed, and 
     automatically resolves merge conflicts (polls GitHub mergeability, merges origin/master, resolves conflicts, pushes 
     clean branch).
+# WARNING: 'github:runner-setup' not found in marketplace manifest — possible rename or removal
 - name: github:runner-setup
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/github:runner-setup/SKILL.md
   hash: sha256:d13e41c983a34173fea03d65f59097a63837bf4a1ff531f9ab4ead15440a8d99
@@ -491,16 +534,19 @@ skills:
     organization or repository runners, adding macOS runners with custom labels (Node.js versions, AWS deployment, 
     Claude Code), or migrating workflows from GitHub-hosted to self-hosted runners. Handles prerequisites verification, 
     service setup with launchd, security configuration, monitoring scripts, and phased workflow rollout.
+# WARNING: 'github:story-create' not found in marketplace manifest — possible rename or removal
 - name: github:story-create
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/github:story-create/SKILL.md
   hash: sha256:82c3748263b36f27fe9d8c64febeba745aa86724709b077aca696c9c71985346
   description: Quick GitHub issue creation for commit workflow. Creates minimal issues with project prefix and stores in
     .claude/active-story.json. Different from /fetch-story (planned work from Projects).
+# WARNING: 'github:story-fetch' not found in marketplace manifest — possible rename or removal
 - name: github:story-fetch
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/github:story-fetch/SKILL.md
   hash: sha256:d24b033cd78f42fcab35b2cbb27eec9872cd58814949b3f5ee9b88451545ceba
   description: Fetch the next Ready story from GitHub Projects by priority. Stores story data in 
     .claude/active-story.json and updates GitHub status to In Progress. Invokable with /fetch-story.
+# WARNING: 'github:story-finalize' not found in marketplace manifest — possible rename or removal
 - name: github:story-finalize
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/github:story-finalize/SKILL.md
   hash: sha256:6d4995fb6a773a2c4992b7568c4994f295feb52e9fcf53e71596eca79ff3a664
@@ -508,50 +554,59 @@ skills:
     work done, link the PR, apply type and domain labels, assign to self, and add to the GitHub Project board. Use after implementation
     is merged or verified complete. Accepts a GitHub issue URL or number as argument; falls back to .agile-dev-team/active-story.json.
     Invokable with /gh:story-finalize.'
+# WARNING: 'github:story-play' not found in marketplace manifest — possible rename or removal
 - name: github:story-play
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/github:story-play/SKILL.md
   hash: sha256:116326450fa48cfbacf411dc35badf52cc122a2e2b26489f5c0396b60ab489e8
   description: Put a story "in play" by fetching it from GitHub Projects, gathering NFRs, collecting context, and 
     creating ADRs as needed. Invokable with /play-story.
+# WARNING: 'github:story-quality' not found in marketplace manifest — possible rename or removal
 - name: github:story-quality
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/github:story-quality/SKILL.md
   hash: sha256:7d011687bd9823a3aff742312dbde8dc6c4a9414e8ffb7145af759ab5c2a00ea
   description: Analyze GitHub Project stories for SMART acceptance criteria and NFR coverage. Applies labels and posts 
     structured feedback comments. Can run as a scheduled background assistant or manually via /check-story-quality.
+# WARNING: 'github:tidy-board' not found in marketplace manifest — possible rename or removal
 - name: github:tidy-board
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/github:tidy-board/SKILL.md
   hash: sha256:4aa8534957cf8c00a6325fb85c627c052f23f3cf3fd1c4dcbd390bbcbe9f6d09
   description: Tidy a GitHub Project board by moving stale "In Progress" items to "Done" when their linked issues are 
     closed or PRs are merged. Use when asked to clean up, tidy, or sync the agile board. Invokable with /tidy-board 
     owner/repo.
+# WARNING: 'github:until-green' not found in marketplace manifest — possible rename or removal
 - name: github:until-green
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/github:until-green/SKILL.md
   hash: sha256:8a930a3a8fbfbf851ef8a5a569c66f6e93fee9fc08b3ccd65c71247a9d82e523
   description: 'Implement a scope of work end-to-end — writes code, commits, creates a PR, then loops fixing CI failures until
     all checks pass. Invoke with a natural language description of the work to do. Example: /until-green add validation to
     the email field in the signup form.'
+# WARNING: 'ios:mobile-test' not found in marketplace manifest — possible rename or removal
 - name: ios:mobile-test
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/ios:mobile-test/SKILL.md
   hash: sha256:5364c6f91bc8cf89f6724e2d20bc562b72b9ce5144745a32b9fadecb283bb5fb
   description: "Run, add, or debug iOS (webkit) mobile layout tests for the aigensa landing page.\nUses raw playwright + Jest
     (jest project: mobile). Trigger when the user wants to\nrun mobile tests, add a new page test for iOS, or debug a webkit
     test failure.\n"
+# WARNING: 'jupyter-remote' not found in marketplace manifest — possible rename or removal
 - name: jupyter-remote
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/jupyter-remote/SKILL.md
   hash: sha256:9f39122d9485e474562507a3776ab7b607fd2f4af98689027af7c29ceb41c35a
   description: Run Python code and notebooks on a Jupyter kernel, remote or local. Use when running GPU-intensive or 
     training code on a remote box, or when running experiments locally via Jupyter.
+# WARNING: 'ready-for-dev-scout' not found in marketplace manifest — possible rename or removal
 - name: ready-for-dev-scout
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/ready-for-dev-scout/SKILL.md
   hash: sha256:e274242d7c8d79f7da7fabc36868d2d6b75c3f0c9abad475fbd84b70befe917b
   description: Pre-implementation scout agent. Analyzes a "Ready for Dev" GitHub story in read-only mode — blast radius,
     architecture review, ADR check, open questions. Writes output to docs/story-scouts/. Invokable with 
     /ready-for-dev-scout [issue_number].
+# WARNING: 'remote-execution' not found in marketplace manifest — possible rename or removal
 - name: remote-execution
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/remote-execution/SKILL.md
   hash: sha256:9ae82895e995e4aa6a234ecbc20b0fde7b90629b924dd60b56f32c07d60c4bb5
   description: Routing pattern for SSH-dispatched compute. Use as a reference skill when building tools that need to run
     code either on a remote box (via SSH tunnel) or locally.
+# WARNING: 'reveal-pdf-export' not found in marketplace manifest — possible rename or removal
 - name: reveal-pdf-export
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/reveal-pdf-export/SKILL.md
   hash: sha256:887c38c67bb385b03448b9e48c7e3841d9c6df8ce50a855bb636b2054490bf7c
@@ -559,32 +614,39 @@ skills:
     Handles all known Reveal.js 4.x print-pdf rendering bugs: padding zeroed by reveal.css, extra blank trailing page from
     page-break-after:always on .pdf-page, and speaker notes inflating slide height. Use when the user asks to export, print,
     or generate a PDF from a Reveal.js presentation, or when building a Reveal.js slide deck that needs PDF output.'
+# WARNING: 'review:code' not found in marketplace manifest — possible rename or removal
 - name: review:code
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/review:code/SKILL.md
   hash: sha256:70575daa91ef015f2409d40859f991aeb5b8f1831c33e1694f0cf5ce426c41d2
   description: Comprehensive code review orchestrator - runs deterministic checks before LLM reviews
+# WARNING: 'review:compliance' not found in marketplace manifest — possible rename or removal
 - name: review:compliance
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/review:compliance/SKILL.md
   hash: sha256:e42695a9852729a11832a093cee504609fb04b883f7b684fa549299f4a334147
   description: Validates business requirements compliance - generates OpenAPI specs, creates contract tests, and ensures
     acceptance criteria alignment
+# WARNING: 'review:overall' not found in marketplace manifest — possible rename or removal
 - name: review:overall
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/review:overall/SKILL.md
   hash: sha256:c88a9d4cf5b9f6ee646717bf79aead123d8637325ecabbd4b8e8b3aef256fb69
   description: Code quality, bug detection, and maintainability review
+# WARNING: 'review:performance' not found in marketplace manifest — possible rename or removal
 - name: review:performance
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/review:performance/SKILL.md
   hash: sha256:99c952f127f713d64c5942db00362e4143b87eb71dba591518a92ddaac47882e
   description: Detect performance issues and inefficiencies
+# WARNING: 'review:security' not found in marketplace manifest — possible rename or removal
 - name: review:security
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/review:security/SKILL.md
   hash: sha256:5993449d6d83588d1c1f5eb4ca85b778e9b482a2bd7546855d8ee8c5fa4c59ba
   description: OWASP Top 10 + API security vulnerability scanner
+# WARNING: 'team:agile-dev' not found in marketplace manifest — possible rename or removal
 - name: team:agile-dev
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/team:agile-dev/SKILL.md
   hash: sha256:bffabba75a2936201c5e97d943db52b9ee28588c43cba546cda0927210230d61
   description: Spin up a 5-agent TDD team (PM, Architect, Test Architect, Backend Dev, Frontend Dev) that fetches the 
     next Ready story and delivers it through a TDD-first workflow. Invokable with /agile-dev-team.
+# WARNING: 'team:until-green' not found in marketplace manifest — possible rename or removal
 - name: team:until-green
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/team:until-green/SKILL.md
   hash: sha256:715d6cb4e02e31d615f7ec45abab894a9e67947025e948fa39f6427206d25123
@@ -595,6 +657,7 @@ skills:
   hash: sha256:729e98f7b5ebb0d2537668bf4cbeacaee355a1cd0d850a122cf25837f15afd25
   description: 'Imported from marketplace: test-architect'
 commands:
+# WARNING: 'agile-dev-team' not found in marketplace manifest — possible rename or removal
 - name: agile-dev-team
   path: https://github.com/amdmax/claude_marketplace/blob/main/commands/agile-dev-team.md
   description: >-
@@ -616,6 +679,7 @@ commands:
     contracts then executes the backend-dev workflow directly.
 
   hash: sha256:995eaca8cdbaef85d93db46948a142a9ff272186fc2fb3287228bd2c3609fe7c
+# WARNING: 'create-claude-hook' not found in marketplace manifest — possible rename or removal
 - name: create-claude-hook
   path: https://github.com/amdmax/claude_marketplace/blob/main/commands/create-claude-hook.md
   description: >-
@@ -644,6 +708,7 @@ commands:
     executes the test-architect workflow directly without waiting for an Architect message.
 
   hash: sha256:72aaf7504fb9137069ac2663d6a78bcf072c4fffa01cdd8cadc79ae306dc5303
+# WARNING: 'write-cdk' not found in marketplace manifest — possible rename or removal
 - name: write-cdk
   path: https://github.com/amdmax/claude_marketplace/blob/main/commands/write-cdk.md
   description: >-
@@ -652,6 +717,7 @@ commands:
     *-stack.ts files.
 
   hash: sha256:c55dd89f364fb85e56b5602563a6a66f9e49adea50fbb58ab027425b657d7b12
+# WARNING: 'write-typescript' not found in marketplace manifest — possible rename or removal
 - name: write-typescript
   path: https://github.com/amdmax/claude_marketplace/blob/main/commands/write-typescript.md
   description: >-
@@ -666,7 +732,7 @@ agents:
     Solution Architect that maps business requirements to implementation details and prepares
     technical documentation for the test architect and developers.
 
-  hash: sha256:39740bf5dbcee87f7582285c3ebd003a8f6d256bd5fdb8b5dbf56caa46f7148e
+  hash: sha256:d9d59d1b804295ad1172795e1d7e50270fbc19991efd79e48f8fae78ee0b4276
 - name: backend-dev
   path: https://github.com/amdmax/claude_marketplace/blob/main/agents/backend-dev.md
   description: >-
@@ -701,7 +767,7 @@ agents:
     Team lead that fetches stories, enriches with acceptance criteria, manages story lifecycle,
     and creates PRs after implementation.
 
-  hash: sha256:54edf20a5e7ac5e4c15e37379536d75c71dcc52158a7de587f9e22214ae5efb8
+  hash: sha256:652b133ef479387b44de8f2540f7ad384a28f698908e7d5198cae2872d522552
 - name: scope-guard
   path: https://github.com/amdmax/claude_marketplace/blob/main/agents/scope-guard.md
   description: >-
