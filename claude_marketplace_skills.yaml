@@ -767,7 +767,7 @@ agents:
     Team lead that fetches stories, enriches with acceptance criteria, manages story lifecycle,
     and creates PRs after implementation.
 
-  hash: sha256:54edf20a5e7ac5e4c15e37379536d75c71dcc52158a7de587f9e22214ae5efb8
+  hash: sha256:439ef0ebe5c884c5270be4983a872e02ca9121651cdc6958dbb36d4f0adf20d5
 - name: scope-guard
   path: https://github.com/amdmax/claude_marketplace/blob/main/agents/scope-guard.md
   description: >-
