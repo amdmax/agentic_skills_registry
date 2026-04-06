@@ -477,7 +477,7 @@ skills:
   description: Edit GitHub Actions workflows with automatic validation
 - name: github:pull-request
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/github:pull-request/SKILL.md
-  hash: sha256:570426935848a0408179b8ed439d44cee5983eaf5b1416edc58efc313412d99a
+  hash: sha256:2790b83d51a0daedea1c280129b9efe1cb27c14bb03713e653e45f2da27098a4
   description: Create pull requests with automatic commit handling, story integration, and merge conflict resolution. 
     Use when user wants to create a PR for current changes. Auto-commits uncommitted changes via /commit skill, prevents
     duplicate PRs, links to active GitHub issue from .claude/active-story.json, creates new issues if needed, and 
@@ -592,7 +592,7 @@ skills:
     all checks pass. Invoke with a natural language description of the work to do.'
 - name: test-architect
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/test-architect/SKILL.md
-  hash: sha256:385bbeb23bb37de0b1709d5f63baa603d2dd66d550198a0f4a7845605a23fd5b
+  hash: sha256:729e98f7b5ebb0d2537668bf4cbeacaee355a1cd0d850a122cf25837f15afd25
   description: 'Imported from marketplace: test-architect'
 commands:
 - name: agile-dev-team
