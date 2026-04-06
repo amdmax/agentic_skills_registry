@@ -657,6 +657,7 @@ skills:
   hash: sha256:729e98f7b5ebb0d2537668bf4cbeacaee355a1cd0d850a122cf25837f15afd25
   description: 'Imported from marketplace: test-architect'
 commands:
+# WARNING: 'agile-dev-team' not found in marketplace manifest — possible rename or removal
 - name: agile-dev-team
   path: https://github.com/amdmax/claude_marketplace/blob/main/commands/agile-dev-team.md
   description: >-
@@ -678,6 +679,7 @@ commands:
     contracts then executes the backend-dev workflow directly.
 
   hash: sha256:995eaca8cdbaef85d93db46948a142a9ff272186fc2fb3287228bd2c3609fe7c
+# WARNING: 'create-claude-hook' not found in marketplace manifest — possible rename or removal
 - name: create-claude-hook
   path: https://github.com/amdmax/claude_marketplace/blob/main/commands/create-claude-hook.md
   description: >-
@@ -706,6 +708,7 @@ commands:
     executes the test-architect workflow directly without waiting for an Architect message.
 
   hash: sha256:72aaf7504fb9137069ac2663d6a78bcf072c4fffa01cdd8cadc79ae306dc5303
+# WARNING: 'write-cdk' not found in marketplace manifest — possible rename or removal
 - name: write-cdk
   path: https://github.com/amdmax/claude_marketplace/blob/main/commands/write-cdk.md
   description: >-
@@ -714,6 +717,7 @@ commands:
     *-stack.ts files.
 
   hash: sha256:c55dd89f364fb85e56b5602563a6a66f9e49adea50fbb58ab027425b657d7b12
+# WARNING: 'write-typescript' not found in marketplace manifest — possible rename or removal
 - name: write-typescript
   path: https://github.com/amdmax/claude_marketplace/blob/main/commands/write-typescript.md
   description: >-
