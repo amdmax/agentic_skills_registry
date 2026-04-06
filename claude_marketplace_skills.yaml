@@ -537,7 +537,7 @@ skills:
 # WARNING: 'github:story-create' not found in marketplace manifest — possible rename or removal
 - name: github:story-create
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/github:story-create/SKILL.md
-  hash: sha256:82c3748263b36f27fe9d8c64febeba745aa86724709b077aca696c9c71985346
+  hash: sha256:48e70a4b383fcdb82f2bb07d8c9da346b789a587208a7ef612ad208a65763a28
   description: Quick GitHub issue creation for commit workflow. Creates minimal issues with project prefix and stores in
     .claude/active-story.json. Different from /fetch-story (planned work from Projects).
 # WARNING: 'github:story-fetch' not found in marketplace manifest — possible rename or removal
@@ -732,7 +732,7 @@ agents:
     Solution Architect that maps business requirements to implementation details and prepares
     technical documentation for the test architect and developers.
 
-  hash: sha256:d9d59d1b804295ad1172795e1d7e50270fbc19991efd79e48f8fae78ee0b4276
+  hash: sha256:5a2f4082d37eefadfc33940b8af9d31ae244044a63a99ca926f13ab12e29f65d
 - name: backend-dev
   path: https://github.com/amdmax/claude_marketplace/blob/main/agents/backend-dev.md
   description: >-
@@ -767,7 +767,7 @@ agents:
     Team lead that fetches stories, enriches with acceptance criteria, manages story lifecycle,
     and creates PRs after implementation.
 
-  hash: sha256:652b133ef479387b44de8f2540f7ad384a28f698908e7d5198cae2872d522552
+  hash: sha256:439ef0ebe5c884c5270be4983a872e02ca9121651cdc6958dbb36d4f0adf20d5
 - name: scope-guard
   path: https://github.com/amdmax/claude_marketplace/blob/main/agents/scope-guard.md
   description: >-
