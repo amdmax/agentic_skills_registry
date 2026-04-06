@@ -537,7 +537,7 @@ skills:
 # WARNING: 'github:story-create' not found in marketplace manifest — possible rename or removal
 - name: github:story-create
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/github:story-create/SKILL.md
-  hash: sha256:82c3748263b36f27fe9d8c64febeba745aa86724709b077aca696c9c71985346
+  hash: sha256:48e70a4b383fcdb82f2bb07d8c9da346b789a587208a7ef612ad208a65763a28
   description: Quick GitHub issue creation for commit workflow. Creates minimal issues with project prefix and stores in
     .claude/active-story.json. Different from /fetch-story (planned work from Projects).
 # WARNING: 'github:story-fetch' not found in marketplace manifest — possible rename or removal
