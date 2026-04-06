@@ -592,7 +592,7 @@ skills:
     all checks pass. Invoke with a natural language description of the work to do.'
 - name: test-architect
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/test-architect/SKILL.md
-  hash: sha256:385bbeb23bb37de0b1709d5f63baa603d2dd66d550198a0f4a7845605a23fd5b
+  hash: sha256:729e98f7b5ebb0d2537668bf4cbeacaee355a1cd0d850a122cf25837f15afd25
   description: 'Imported from marketplace: test-architect'
 commands:
 - name: agile-dev-team
