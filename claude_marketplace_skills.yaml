@@ -732,7 +732,7 @@ agents:
     Solution Architect that maps business requirements to implementation details and prepares
     technical documentation for the test architect and developers.
 
-  hash: sha256:39740bf5dbcee87f7582285c3ebd003a8f6d256bd5fdb8b5dbf56caa46f7148e
+  hash: sha256:5a2f4082d37eefadfc33940b8af9d31ae244044a63a99ca926f13ab12e29f65d
 - name: backend-dev
   path: https://github.com/amdmax/claude_marketplace/blob/main/agents/backend-dev.md
   description: >-
