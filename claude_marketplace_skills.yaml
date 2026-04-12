@@ -732,7 +732,7 @@ agents:
     Solution Architect that maps business requirements to implementation details and prepares
     technical documentation for the test architect and developers.
 
-  hash: sha256:5a2f4082d37eefadfc33940b8af9d31ae244044a63a99ca926f13ab12e29f65d
+  hash: sha256:8d21707c93201e33f1bfb3a761efa2f5a210042af50eabfd9a06be450f76e270
 - name: backend-dev
   path: https://github.com/amdmax/claude_marketplace/blob/main/agents/backend-dev.md
   description: >-
@@ -767,7 +767,7 @@ agents:
     Team lead that fetches stories, enriches with acceptance criteria, manages story lifecycle,
     and creates PRs after implementation.
 
-  hash: sha256:439ef0ebe5c884c5270be4983a872e02ca9121651cdc6958dbb36d4f0adf20d5
+  hash: sha256:652b133ef479387b44de8f2540f7ad384a28f698908e7d5198cae2872d522552
 - name: scope-guard
   path: https://github.com/amdmax/claude_marketplace/blob/main/agents/scope-guard.md
   description: >-
