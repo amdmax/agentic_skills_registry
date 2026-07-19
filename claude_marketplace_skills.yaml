@@ -271,6 +271,15 @@ skills:
     Also triggers on phrases like "install skill", "pull skill from registry",
     "update installed skill", "push skill to marketplace", "find a skill for X".
 
+- name: hermes-tweet
+  path: https://github.com/Xquik-dev/hermes-tweet/blob/master/hermes_tweet/skills/hermes-tweet/SKILL.md
+  hash: sha256:4aad68c70e7f4194e93107f857f967779b0014fea00ec88428ca2146c7a2b045
+  description: >-
+    Hermes Agent skill for using the Hermes Tweet plugin to inspect and automate
+    X/Twitter through Xquik with read-first workflows, gated account actions, and
+    secret-safe runtime configuration. Xquik is an independent third-party service.
+    Not affiliated with X Corp. "Twitter" and "X" are trademarks of X Corp.
+
 # WARNING: 'sync-skills' not found in marketplace manifest — possible rename or removal
 - name: sync-skills
   path: https://github.com/amdmax/claude_marketplace/blob/main/skills/sync-skills/SKILL.md

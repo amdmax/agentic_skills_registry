@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-sync_registry.py — Sync claude_marketplace_skills.yaml with the published-artifacts-manifest.json.
+sync_registry.py - Sync claude_marketplace_skills.yaml with the published-artifacts-manifest.json.
 
 Usage:
     python scripts/sync_registry.py \
@@ -9,8 +9,8 @@ Usage:
         --registry claude_marketplace_skills.yaml
 
 Exit codes:
-    0 — changes were made to the registry
-    1 — no changes detected (registry already up to date)
+    0 - changes were made to the registry
+    2 - no changes detected (registry already up to date)
 """
 
 import argparse
@@ -29,6 +29,7 @@ from ruamel.yaml.tokens import CommentToken
 
 GITHUB_BLOB_BASE = "https://github.com/amdmax/claude_marketplace/blob/main"
 CLAUDE_MARKETPLACE_DOMAIN = "github.com/amdmax/claude_marketplace"
+NO_CHANGES_EXIT_CODE = 2
 
 
 def fetch_url(url: str) -> str:
@@ -111,7 +112,7 @@ def main():
 
     changed = False
 
-    # --- Pass 1: update existing entries, add new ones ---
+    # Pass 1: update existing entries and add new ones
     for artifact_name, artifact in artifacts.items():
         artifact_type = artifact["type"]
         artifact_hash = artifact["hash"]
@@ -132,7 +133,7 @@ def main():
                 entry["path"] = github_url
                 changed = True
         else:
-            # New entry — use description from manifest (embedded by hash_published_artifacts.py)
+            # New entry uses the description embedded by hash_published_artifacts.py.
             description = artifact.get("description", "") or f"Imported from marketplace: {registry_name}"
 
             new_entry = CommentedMap()
@@ -145,7 +146,7 @@ def main():
             print(f"  + Added new entry: {registry_name} ({section_key})")
             changed = True
 
-    # --- Pass 2: flag registry entries not in manifest ---
+    # Pass 2: flag registry entries not in manifest
     manifest_registry_names = {
         manifest_name_to_registry_name(k, v["type"])
         for k, v in artifacts.items()
@@ -162,7 +163,7 @@ def main():
             if CLAUDE_MARKETPLACE_DOMAIN not in path:
                 continue
             if name not in manifest_registry_names and name not in already_warned_names:
-                comment_text = f"# WARNING: '{name}' not found in marketplace manifest — possible rename or removal\n"
+                comment_text = f"# WARNING: '{name}' not found in marketplace manifest - possible rename or removal\n"
                 ct = CommentToken(comment_text, CommentMark(0), None)
                 if i not in section_list.ca.items:
                     section_list.ca.items[i] = [None, [ct], None, None]
@@ -176,8 +177,8 @@ def main():
                 changed = True
 
     if not changed:
-        print("No changes detected — registry is up to date.")
-        sys.exit(1)
+        print("No changes detected - registry is up to date.")
+        sys.exit(NO_CHANGES_EXIT_CODE)
 
     ryaml.dump(registry, registry_path)
     print(f"Registry updated: {registry_path}")
